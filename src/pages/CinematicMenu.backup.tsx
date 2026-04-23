@@ -5,7 +5,7 @@ import { MENU_ITEMS } from '../constants';
 
 // Organize and map category IDs to display titles
 const CATEGORY_MAP: Record<string, { title: string, subtitle?: string }> = {
-  taste-of-village: { title: "Signature Taste of Village", subtitle: "Where our story began. Authentic, rich, and unforgettable." },
+  'taste-of-village': { title: "Signature Taste of Village", subtitle: "Where our story began. Authentic, rich, and unforgettable." },
   milkshake: { title: "Royal Milkshakes", subtitle: "Thick, creamy, and spun with premium ingredients." },
   dessert: { title: "Sweet Indulgences", subtitle: "Traditional Meetha (Desserts) to satisfy your soul." },
   signature_desserts: { title: "Signature Desserts", subtitle: "Decadent creations crafted for the ultimate treat." },

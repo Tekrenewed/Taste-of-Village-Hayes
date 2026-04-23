@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Sparkles, MapPin, Clock, Car } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 
-export const UxbridgeTaste of Village = () => {
+export const UxbridgeTasteOfVillage = () => {
   const schema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",

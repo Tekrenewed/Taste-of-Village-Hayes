@@ -117,7 +117,7 @@ export const AIStudio = () => {
                   <span className="font-bold">Google Pro AI Insight:</span> "Slow-motion caramel drips over crushed pistachios" is currently trending on Instagram Reels in the UK dessert space.
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {['#PistachioTaste of Village', '#ASMRDessert', '#SlowMoPour', '#DubaiChocolate'].map(tag => (
+                  {['#PistachioTasteOfVillage', '#ASMRDessert', '#SlowMoPour', '#DubaiChocolate'].map(tag => (
                     <span key={tag} className="px-3 py-1 bg-brand-pistachio/20 text-brand-green font-bold text-xs rounded-full">
                       {tag}
                     </span>

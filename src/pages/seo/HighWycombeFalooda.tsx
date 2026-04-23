@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Sparkles, MapPin, Clock } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 
-export const HighWycombeTaste of Village = () => {
+export const HighWycombeTasteOfVillage = () => {
   const schema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",

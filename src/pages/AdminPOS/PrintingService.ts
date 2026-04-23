@@ -1,4 +1,4 @@
-import { Taste of VillageTelemetry } from '../../lib/telemetry';
+import { TasteOfVillageTelemetry } from '../../lib/telemetry';
 import { Order } from '../../types';
 import { SHOP_CONFIG } from '../../shopConfig';
 
@@ -8,7 +8,7 @@ export interface PrinterConfig {
 }
 
 export const printTicket = async (order: any, config?: PrinterConfig): Promise<void> => {
-  Taste of VillageTelemetry.track('pos_print_started', { orderId: order.id, type: 'cloud_poll' });
+  TasteOfVillageTelemetry.track('pos_print_started', { orderId: order.id, type: 'cloud_poll' });
   try {
     const isDev = import.meta.env.DEV;
     const apiBase = isDev ? (import.meta.env.VITE_API_URL || 'http://localhost:8080') : '';
@@ -36,17 +36,17 @@ export const printTicket = async (order: any, config?: PrinterConfig): Promise<v
       await updateDoc(docRef, { needsPrinting: true, printed: false, printStatus: 'QUEUED_REPRINT' });
     }
     
-    Taste of VillageTelemetry.track('pos_print_success', { orderId: order.id, type: 'cloud_poll_queued' });
+    TasteOfVillageTelemetry.track('pos_print_success', { orderId: order.id, type: 'cloud_poll_queued' });
     console.log(`[Print Queue] Order ${order.id} queued for cloud printing.`);
   } catch (error: any) {
     console.error('Cloud Print Error:', error);
-    Taste of VillageTelemetry.track('pos_print_error', { orderId: order.id, error: error.message });
+    TasteOfVillageTelemetry.track('pos_print_error', { orderId: order.id, error: error.message });
     throw error;
   }
 };
 
 export const printBooking = async (booking: any, config: PrinterConfig): Promise<void> => {
-  Taste of VillageTelemetry.track('pos_print_booking', { bookingId: booking.id });
+  TasteOfVillageTelemetry.track('pos_print_booking', { bookingId: booking.id });
   const url = `${config.protocol}://${config.ip}/cgi-bin/epos/service.cgi?devid=local_printer&timeout=5000`;
   
   let xml = `<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -81,7 +81,7 @@ export const printBooking = async (booking: any, config: PrinterConfig): Promise
     if (!res.ok) throw new Error('Printer returned ' + res.status);
   } catch (err: any) {
     console.error('ePOS Print Error (Booking):', err);
-    Taste of VillageTelemetry.track('pos_print_error', { bookingId: booking.id, error: err.message });
+    TasteOfVillageTelemetry.track('pos_print_error', { bookingId: booking.id, error: err.message });
     throw err;
   }
 };

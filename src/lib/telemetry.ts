@@ -12,7 +12,7 @@ export interface TelemetryEvent {
   };
 }
 
-export class Taste of VillageTelemetry {
+export class TasteOfVillageTelemetry {
   private static isEnabled = true;
 
   static async track(eventName: string, metadata?: Record<string, any>) {

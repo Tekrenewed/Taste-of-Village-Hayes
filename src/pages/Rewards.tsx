@@ -110,7 +110,7 @@ export const Rewards = () => {
     : [];
 
   const categoryEmoji: Record<string, string> = {
-    taste-of-village: '🍨',
+    'taste-of-village': '🍨',
     chaat: '🥘',
     dessert: '🍰',
     drinks: '🥤',
