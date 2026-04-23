@@ -110,7 +110,7 @@ export const Rewards = () => {
     : [];
 
   const categoryEmoji: Record<string, string> = {
-    falooda: '🍨',
+    taste-of-village: '🍨',
     chaat: '🥘',
     dessert: '🍰',
     drinks: '🥤',
@@ -119,13 +119,13 @@ export const Rewards = () => {
   const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
   // Generate QR payload (phone number encrypted-ish for kiosk scanning)
-  const qrPayload = profile ? `FALOODA-REWARDS:${profile.phone}` : '';
+  const qrPayload = profile ? `TASTE OF VILLAGE-REWARDS:${profile.phone}` : '';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-brand-cream via-white to-brand-cream/50 pt-20 pb-20">
       <SEOHead
-        title="Rewards | Falooda & Co"
-        description="Check your Falooda & Co loyalty rewards. Every 5th falooda and 5th chaat is free!"
+        title="Rewards | Taste of Village"
+        description="Check your Taste of Village loyalty rewards. Every 5th taste-of-village and 5th chaat is free!"
         canonicalUrl="/rewards"
       />
 
@@ -137,10 +137,10 @@ export const Rewards = () => {
             <Gift size={36} className="text-white" />
           </div>
           <h1 className="font-display text-5xl font-bold text-brand-text mb-3">
-            Falooda Rewards
+            Taste of Village Rewards
           </h1>
           <p className="text-brand-text/60 text-lg max-w-md mx-auto">
-            Every 5th falooda is free. Every 5th chaat is free. It's that simple.
+            Every 5th taste-of-village is free. Every 5th chaat is free. It's that simple.
           </p>
         </div>
 
@@ -186,7 +186,7 @@ export const Rewards = () => {
                     <UserPlus size={18} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-brand-text">Join Falooda Rewards — Free!</h3>
+                    <h3 className="font-bold text-brand-text">Join Taste of Village Rewards — Free!</h3>
                     <p className="text-brand-text/40 text-xs">No purchase needed. Start tracking your progress now.</p>
                   </div>
                 </div>
@@ -209,7 +209,7 @@ export const Rewards = () => {
                   </div>
                   <div>
                     <label className="text-xs font-bold text-brand-text/50 mb-1 block flex items-center gap-2">
-                      <Cake size={14} className="text-brand-pink" /> Birthday (get a free falooda! 🎂)
+                      <Cake size={14} className="text-brand-pink" /> Birthday (get a free taste-of-village! 🎂)
                     </label>
                     <div className="grid grid-cols-2 gap-3">
                       <select
@@ -247,7 +247,7 @@ export const Rewards = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {[
                     { icon: '🛒', title: 'Order', desc: 'Place orders online or in-store with your phone number' },
-                    { icon: '📊', title: 'Track', desc: 'We count every falooda and chaat you buy' },
+                    { icon: '📊', title: 'Track', desc: 'We count every taste-of-village and chaat you buy' },
                     { icon: '🎁', title: 'Earn', desc: 'Every 5th item in a category is completely free' },
                   ].map((step, i) => (
                     <div key={i} className="text-center">
@@ -307,8 +307,8 @@ export const Rewards = () => {
                 <div className="flex items-center gap-3 mb-4">
                   <Cake size={20} className="text-brand-pink" />
                   <div>
-                    <p className="font-bold text-brand-text text-sm">Add your birthday — earn a free falooda! 🎂</p>
-                    <p className="text-brand-text/40 text-xs">We'll send you a free falooda reward every year around your birthday.</p>
+                    <p className="font-bold text-brand-text text-sm">Add your birthday — earn a free taste-of-village! 🎂</p>
+                    <p className="text-brand-text/40 text-xs">We'll send you a free taste-of-village reward every year around your birthday.</p>
                   </div>
                 </div>
                 <div className="flex gap-3">

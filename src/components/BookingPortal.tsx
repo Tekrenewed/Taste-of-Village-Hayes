@@ -48,7 +48,7 @@ export const BookingPortal = () => {
                     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
                         <div className="text-center">
                             <h2 className="font-display text-5xl font-bold mb-4 text-brand-obsidian">Table Reservation</h2>
-                            <p className="text-brand-obsidian/50 font-medium tracking-wide">Secure your spot at Falooda & Co</p>
+                            <p className="text-brand-obsidian/50 font-medium tracking-wide">Secure your spot at Taste of Village</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

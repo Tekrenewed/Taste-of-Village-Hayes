@@ -9,7 +9,7 @@ export const Home = () => {
     <div className="flex flex-col min-h-screen overflow-hidden bg-brand-cream relative">
       <SEOHead 
         title="Luxury Desserts & Street Food" 
-        description="From Sips to Bites, We've Got You. Discover Falooda & Co's exquisite range of artisanal desserts, fresh juices, chaats, and street food on Farnham Road, Slough."
+        description="From Sips to Bites, We've Got You. Discover Taste of Village's exquisite range of artisanal desserts, fresh juices, chaats, and street food on Farnham Road, Slough."
         canonicalUrl="/"
         schema={JSON.stringify({
           "@context": "https://schema.org",

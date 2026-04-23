@@ -1,5 +1,5 @@
 /**
- * Falooda & Co — Custom Error Monitoring
+ * Taste of Village — Custom Error Monitoring
  * 
  * Zero external dependencies. Writes errors to Firestore `error_logs` collection.
  * Viewable in the Admin dashboard + Google Cloud Console automatically.

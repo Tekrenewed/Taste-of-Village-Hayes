@@ -3,13 +3,13 @@ import { MenuItem, BuilderConfig } from './types';
 // FULL PRODUCTION MENU
 export const MENU_ITEMS: MenuItem[] = [
   {
-    "id": "f_rose_falooda",
-    "name": "Rose Falooda",
+    "id": "f_rose_taste-of-village",
+    "name": "Rose Taste of Village",
     "description": "Silky noodles, crunchy seeds, and the scent of a thousand roses.",
     "price": 6.99,
     "originalPrice": 6.99,
     "category": "desserts",
-    "image": "/assets/rose_falooda.jpg",
+    "image": "/assets/rose_taste-of-village.jpg",
     "popular": true
   },
   {
@@ -33,9 +33,9 @@ export const MENU_ITEMS: MenuItem[] = [
     "popular": false
   },
   {
-    "id": "f_pistachio_royale_falooda",
-    "name": "Pistachio Royale Falooda",
-    "description": "A pistachio-forward falooda with deep flavour and creamy layers throughout.",
+    "id": "f_pistachio_royale_taste-of-village",
+    "name": "Pistachio Royale Taste of Village",
+    "description": "A pistachio-forward taste-of-village with deep flavour and creamy layers throughout.",
     "price": 6.49,
     "originalPrice": 6.49,
     "category": "desserts",
@@ -411,7 +411,7 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     "id": "c_special_chaat",
-    "name": "Falooda & Co Special Chaat",
+    "name": "Taste of Village Special Chaat",
     "description": "Signature mix, layered and loaded to hit every flavour note including Lobioa, Bhalla and Chana Chat.",
     "price": 8.49,
     "category": "starters",
@@ -1007,18 +1007,18 @@ export const BUILDER_CONFIG: BuilderConfig = {
 
   // Step 1: Base Milk — Rabri Milk is the only authentic option
   bases: [
-    { id: 'b1', name: 'Rabri Milk', price: 0, description: 'Our signature slow-cooked sweetened milk — the traditional falooda foundation', tag: 'Traditional' },
+    { id: 'b1', name: 'Rabri Milk', price: 0, description: 'Our signature slow-cooked sweetened milk — the traditional taste-of-village foundation', tag: 'Traditional' },
   ],
 
-  // Step 2: Falooda Noodles — the vermicelli layer
+  // Step 2: Taste of Village Noodles — the vermicelli layer
   noodles: [
-    { id: 'n1', name: 'With Falooda Noodles', price: 0, description: 'Traditional thin cornstarch vermicelli', tag: 'Traditional' },
+    { id: 'n1', name: 'With Taste of Village Noodles', price: 0, description: 'Traditional thin cornstarch vermicelli', tag: 'Traditional' },
     { id: 'n2', name: 'Without Noodles', price: 0, description: 'Skip the noodles for a smoother texture' },
   ],
 
   // Step 3: Syrup — defines the colour and core flavour
   syrups: [
-    { id: 's1', name: 'Rooh Afza', price: 0, description: 'The iconic rose syrup — sweet, floral, unmistakably falooda', tag: 'Traditional' },
+    { id: 's1', name: 'Rooh Afza', price: 0, description: 'The iconic rose syrup — sweet, floral, unmistakably taste-of-village', tag: 'Traditional' },
     { id: 's2', name: 'No Syrup', price: 0, description: 'Let the Rabri milk and ice cream shine on their own' },
     { id: 's3', name: 'Pistachio Syrup', price: 0.50, description: 'Nutty, fragrant green drizzle', tag: 'Premium' },
     { id: 's4', name: 'Mango Syrup', price: 0.50, description: 'Sweet Alphonso-inspired tropical burst' },
@@ -1035,7 +1035,7 @@ export const BUILDER_CONFIG: BuilderConfig = {
 
   // Step 5: Extras — jelly, sabja seeds, fruit layers (multi-select)
   extras: [
-    { id: 'e1', name: 'Sabja Seeds', price: 0, description: 'Cooling, gelatinous basil seeds — a falooda signature', tag: 'Traditional' },
+    { id: 'e1', name: 'Sabja Seeds', price: 0, description: 'Cooling, gelatinous basil seeds — a taste-of-village signature', tag: 'Traditional' },
     { id: 'e2', name: 'Rose Jelly', price: 0.50, description: 'Soft rose-flavoured jelly cubes' },
     { id: 'e3', name: 'Mango Jelly', price: 0.50, description: 'Sweet mango-flavoured jelly cubes' },
     { id: 'e4', name: 'Strawberry Jelly', price: 0.50, description: 'Fresh strawberry-flavoured jelly cubes' },
@@ -1047,7 +1047,7 @@ export const BUILDER_CONFIG: BuilderConfig = {
     { id: 't2', name: 'Sliced Almonds', price: 0.50, description: 'Toasted almond flakes' },
     { id: 't3', name: 'Dried Rose Petals', price: 0.50, description: 'Fragrant edible rose petals' },
     { id: 't4', name: 'Tutti Frutti', price: 0.50, description: 'Colourful candied fruit pieces' },
-    { id: 't5', name: 'Edible Gold Dust', price: 2.00, description: 'Pure 24k edible gold — for the ultimate luxury falooda', tag: 'Luxury' },
+    { id: 't5', name: 'Edible Gold Dust', price: 2.00, description: 'Pure 24k edible gold — for the ultimate luxury taste-of-village', tag: 'Luxury' },
     { id: 't6', name: 'Vermicelli Crunch', price: 0.50, description: 'Crispy fried vermicelli topping' },
   ]
 };

@@ -9,19 +9,19 @@ export const MaidenheadStreetFood = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Authentic Indian Street Food Near Maidenhead",
-    "image": "https://faloodaandco.co.uk/assets/hero_tile.png",
+    "image": "https://taste-of-villageandco.co.uk/assets/hero_tile.png",
     "author": {
       "@type": "Organization",
-      "name": "Falooda & Co"
+      "name": "Taste of Village"
     },
-    "description": "Looking for the best Indian street food near Maidenhead? Falooda & Co serves authentic late-night chaat, samosas, and Karak Chai just down the M4."
+    "description": "Looking for the best Indian street food near Maidenhead? Taste of Village serves authentic late-night chaat, samosas, and Karak Chai just down the M4."
   });
 
   return (
     <div className="bg-brand-cream min-h-screen pt-20 pb-20 font-sans">
       <SEOHead 
         title="Indian Street Food & Chaat Near Maidenhead" 
-        description="Craving late-night Indian street food near Maidenhead? Take a quick drive to Falooda & Co in Slough for authentic Samosa Chaat, Gol Gappe, and Karak Chai."
+        description="Craving late-night Indian street food near Maidenhead? Take a quick drive to Taste of Village in Slough for authentic Samosa Chaat, Gol Gappe, and Karak Chai."
         canonicalUrl="/maidenhead-street-food"
         schema={schema}
       />
@@ -65,11 +65,11 @@ export const MaidenheadStreetFood = () => {
           >
             <h2 className="font-serif text-3xl mb-4 text-brand-text">Karak Chai & Desserts</h2>
             <p className="text-brand-text/70 leading-relaxed mb-6">
-              Pair your savory street food with the finest Karak Chai in Berkshire, brewed fresh every evening. Or finish off with our signature Halal desserts, including the Royal Heritage Falooda.
+              Pair your savory street food with the finest Karak Chai in Berkshire, brewed fresh every evening. Or finish off with our signature Halal desserts, including the Royal Heritage Taste of Village.
             </p>
             <ul className="space-y-3 font-semibold text-brand-text">
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> Authentic Karak Chai</li>
-              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> The Royal Heritage Falooda</li>
+              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> The Royal Heritage Taste of Village</li>
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> Fresh Hot Cookie Dough</li>
             </ul>
           </motion.div>

@@ -2,7 +2,8 @@ import { doc, setDoc, updateDoc, getDoc, getDocs, collection, query, orderBy, on
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '../firebaseConfig';
 import { MenuItem, BuilderConfig } from '../types';
-import { MENU_ITEMS, BUILDER_CONFIG } from '../constants';
+import { BUILDER_CONFIG } from '../constants';
+import tovMenuData from '../data/tov-menu.json';
 import { FEATURES } from '../shopConfig';
 import { fetchLiveMenu } from './productService';
 
@@ -40,7 +41,7 @@ export async function getMenuItems(): Promise<MenuItem[]> {
   }
 
   // Fallback to hardcoded constants
-  cachedMenu = MENU_ITEMS;
+  cachedMenu = tovMenuData as MenuItem[];
   return cachedMenu;
 }
 
@@ -61,7 +62,7 @@ export function streamMenuItems(callback: (items: MenuItem[]) => void): () => vo
       }
     } catch (err) {
       console.error('[Menu] Polling error:', err);
-      if (!isCancelled) callback(MENU_ITEMS); // Fallback
+      if (!isCancelled) callback(tovMenuData as MenuItem[]); // Fallback
     }
   };
 

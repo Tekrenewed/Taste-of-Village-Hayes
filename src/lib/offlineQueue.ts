@@ -7,7 +7,7 @@
  * Uses the raw IndexedDB API (no dependencies) to keep the bundle small.
  */
 
-const DB_NAME = 'falooda_pos_offline';
+const DB_NAME = 'taste-of-village_pos_offline';
 const DB_VERSION = 1;
 const STORE_NAME = 'pending_orders';
 

@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom';
 import { Sparkles, MapPin, Clock } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 
-export const HighWycombeFalooda = () => {
+export const HighWycombeTaste of Village = () => {
   const schema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Authentic Falooda & South Asian Street Food Near High Wycombe",
-    "image": "https://faloodaandco.co.uk/assets/hero_tile.png",
+    "headline": "Authentic Taste of Village & South Asian Street Food Near High Wycombe",
+    "image": "https://taste-of-villageandco.co.uk/assets/hero_tile.png",
     "author": {
       "@type": "Organization",
-      "name": "Falooda & Co"
+      "name": "Taste of Village"
     },
-    "description": "Struggling to find an authentic Falooda near High Wycombe? Take the short drive down to Falooda & Co. We serve the Royal Heritage Falooda alongside London's best slow-cooked Samosa Chaat and fresh Dahi Bhallay."
+    "description": "Struggling to find an authentic Taste of Village near High Wycombe? Take the short drive down to Taste of Village. We serve the Royal Heritage Taste of Village alongside London's best slow-cooked Samosa Chaat and fresh Dahi Bhallay."
   });
 
   return (
     <div className="bg-brand-cream min-h-screen pt-20 pb-20 font-sans">
       <SEOHead 
-        title="Authentic Falooda Near High Wycombe" 
-        description="Looking for the best Falooda near High Wycombe? Just a short drive away, Falooda & Co serves authentic Royal Falooda and the finest house-made chaat in the region."
-        canonicalUrl="/high-wycombe-falooda"
+        title="Authentic Taste of Village Near High Wycombe" 
+        description="Looking for the best Taste of Village near High Wycombe? Just a short drive away, Taste of Village serves authentic Royal Taste of Village and the finest house-made chaat in the region."
+        canonicalUrl="/high-wycombe-taste-of-village"
         schema={schema}
       />
       
@@ -33,9 +33,9 @@ export const HighWycombeFalooda = () => {
           className="text-center mb-16"
         >
           <span className="text-brand-electricPeach font-bold tracking-widest uppercase text-xs mb-4 block">A Short Drive from High Wycombe</span>
-          <h1 className="font-serif text-5xl md:text-6xl text-brand-text mb-6">Finally. An Authentic Falooda Experience.</h1>
+          <h1 className="font-serif text-5xl md:text-6xl text-brand-text mb-6">Finally. An Authentic Taste of Village Experience.</h1>
           <p className="text-lg text-brand-text/70 leading-relaxed max-w-2xl mx-auto">
-            High Wycombe locals know that finding a truly authentic Falooda or traditional Dahi Bhalla nearby is almost impossible. That's why we invite you to make the short trip to Farnham Road. We do it the traditional way.
+            High Wycombe locals know that finding a truly authentic Taste of Village or traditional Dahi Bhalla nearby is almost impossible. That's why we invite you to make the short trip to Farnham Road. We do it the traditional way.
           </p>
         </motion.div>
 
@@ -46,9 +46,9 @@ export const HighWycombeFalooda = () => {
             transition={{ delay: 0.2 }}
             className="obsidian-card p-10 rounded-[3rem] bg-brand-obsidian text-white"
           >
-            <h2 className="font-serif text-3xl mb-4 text-brand-electricPeach">The Royal Heritage Falooda</h2>
+            <h2 className="font-serif text-3xl mb-4 text-brand-electricPeach">The Royal Heritage Taste of Village</h2>
             <p className="text-white/70 leading-relaxed mb-6">
-              You won't find generic syrups or corner-cutting here. Our signature Royal Heritage Falooda is crafted with luxury traditional kulfi, rich basil seeds, and authentic Rooh Afza, delivering that brilliant nostalgic taste you've been searching for.
+              You won't find generic syrups or corner-cutting here. Our signature Royal Heritage Taste of Village is crafted with luxury traditional kulfi, rich basil seeds, and authentic Rooh Afza, delivering that brilliant nostalgic taste you've been searching for.
             </p>
             <ul className="space-y-3 font-semibold text-brand-pinkLight">
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Authentic Mughal Recipes</li>
@@ -83,7 +83,7 @@ export const HighWycombeFalooda = () => {
         >
           <h2 className="font-serif text-4xl mb-6">Come Taste the Difference</h2>
           <p className="text-brand-text/70 leading-relaxed max-w-xl mx-auto mb-10">
-            Don't settle for mediocre street food. Take the quick drive down to Slough and experience the most authentic Falooda and handcrafted Chaat available outside of South Asia.
+            Don't settle for mediocre street food. Take the quick drive down to Slough and experience the most authentic Taste of Village and handcrafted Chaat available outside of South Asia.
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10">

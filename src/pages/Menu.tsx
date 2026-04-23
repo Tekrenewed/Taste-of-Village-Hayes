@@ -238,7 +238,7 @@ export const Menu = () => {
     <div className="min-h-screen bg-brand-cream pb-20">
       <SEOHead 
         title="Full Menu" 
-        description="View the official menu for Falooda & Co in Slough. Treat yourself to our Signature Samosa Chaat, Royal Heritage Falooda, Karak Chai, and more."
+        description="View the official menu for Taste of Village in Slough. Treat yourself to our Signature Samosa Chaat, Royal Heritage Taste of Village, Karak Chai, and more."
         canonicalUrl="/menu"
         schema={JSON.stringify({
           "@context": "https://schema.org",
@@ -253,13 +253,13 @@ export const Menu = () => {
               "hasMenuItem": [
                 {
                   "@type": "MenuItem",
-                  "name": "The Royal Heritage Falooda",
-                  "description": "Our namesake masterpiece. A traditional South Asian falooda originating from the Mughal Empire, modernised for our Slough community. It blends authentic Rooh Afza syrup imported from the East, sweet basil seeds, and rich artisanal kulfi."
+                  "name": "The Royal Heritage Taste of Village",
+                  "description": "Our namesake masterpiece. A traditional South Asian taste-of-village originating from the Mughal Empire, modernised for our Slough community. It blends authentic Rooh Afza syrup imported from the East, sweet basil seeds, and rich artisanal kulfi."
                 },
                 {
                   "@type": "MenuItem",
-                  "name": "Pistachio Royale Falooda",
-                  "description": "A luxuriously nutty take on the classic Falooda, featuring deep layers of pistachio kulfi and roasted nuts."
+                  "name": "Pistachio Royale Taste of Village",
+                  "description": "A luxuriously nutty take on the classic Taste of Village, featuring deep layers of pistachio kulfi and roasted nuts."
                 }
               ]
             },
@@ -269,7 +269,7 @@ export const Menu = () => {
               "hasMenuItem": [
                 {
                   "@type": "MenuItem",
-                  "name": "Falooda & Co Special Chaat",
+                  "name": "Taste of Village Special Chaat",
                   "description": "A legendary fusion of traditional Indian street food and late night cravings. Crispy papdi, sweet yogurt, and high-heat spices crafted using authentic recipes."
                 },
                 {
@@ -683,7 +683,7 @@ export const Menu = () => {
 
                   <div className="bg-white p-6 rounded-3xl shadow-xl border border-brand-pinkLight/30 inline-block">
                     <QRCode 
-                      value={`FALOODA-ORDER:${completedOrder.id}`} 
+                      value={`TASTE OF VILLAGE-ORDER:${completedOrder.id}`} 
                       size={140}
                       fgColor="#2B1A12"
                       level="Q"

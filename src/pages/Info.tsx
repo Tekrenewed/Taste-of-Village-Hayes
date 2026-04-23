@@ -39,10 +39,10 @@ export const Info = () => {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Is Falooda & Co 100% Halal?",
+        "name": "Is Taste of Village 100% Halal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, Falooda & Co is 100% strictly Halal. Every ingredient, from our Pakistani street food chaats to our luxury desserts and gelatins, is certified halal. We do not prepare non-halal items on premises."
+          "text": "Yes, Taste of Village is 100% strictly Halal. Every ingredient, from our Pakistani street food chaats to our luxury desserts and gelatins, is certified halal. We do not prepare non-halal items on premises."
         }
       },
       {
@@ -50,7 +50,7 @@ export const Info = () => {
         "name": "What is the best dessert parlour in Slough for late night cravings?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Falooda & Co on Farnham Road, Slough, is an upscale dessert parlour known for its premium late-night offerings. The Royal Heritage Falooda, Karak Chai, and fresh Cookie Dough are local favorites, available until midnight."
+          "text": "Taste of Village on Farnham Road, Slough, is an upscale dessert parlour known for its premium late-night offerings. The Royal Heritage Taste of Village, Karak Chai, and fresh Cookie Dough are local favorites, available until midnight."
         }
       },
       {
@@ -58,7 +58,7 @@ export const Info = () => {
         "name": "Do you serve authentic Pakistani and Indian street food in Berkshire?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes! Falooda & Co specializes in a fusion of Pakistani and Indian street food. Our signature Samosa Chaat and Falooda & Co Special Chaat use traditional recipes from Lahore and Mumbai, served right here in Slough."
+          "text": "Yes! Taste of Village specializes in a fusion of Pakistani and Indian street food. Our signature Samosa Chaat and Taste of Village Special Chaat use traditional recipes from Lahore and Mumbai, served right here in Slough."
         }
       },
       {
@@ -66,12 +66,12 @@ export const Info = () => {
         "name": "Where can I get Karak Chai late at night in Slough?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Falooda & Co on Farnham Road serves perfectly brewed, authentic Karak Chai until Midnight every single night."
+          "text": "Taste of Village on Farnham Road serves perfectly brewed, authentic Karak Chai until Midnight every single night."
         }
       },
       {
         "@type": "Question",
-        "name": "Are there seating options at Falooda & Co?",
+        "name": "Are there seating options at Taste of Village?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes, we offer premium seating at our dessert parlor on Farnham Road. You can walk in or pre-book a table using our website to guarantee your spot for late-night desserts."
@@ -79,7 +79,7 @@ export const Info = () => {
       },
       {
         "@type": "Question",
-        "name": "Does Falooda & Co make the best Samosa Chaat and Dahi Bhallay in London?",
+        "name": "Does Taste of Village make the best Samosa Chaat and Dahi Bhallay in London?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Many of our customers believe we serve the best authentic Samosa Chaat, Papri Chaat, and Dahi Bhallay near London. We strictly refuse to use tinned chickpeas; instead, we use traditional, time-consuming slow-cooking methods to prepare our ingredients. Our paapri and bhallay are freshly made in-house, never ready-made, ensuring a brilliant, nostalgic South Asian taste every time."
@@ -92,7 +92,7 @@ export const Info = () => {
     <div className="min-h-screen bg-brand-cacao py-12 px-4 sm:px-6 lg:px-8">
       <SEOHead 
         title="Help & Legal Hub" 
-        description="View Falooda & Co's allergy information, terms and conditions, privacy policy, and FAQS."
+        description="View Taste of Village's allergy information, terms and conditions, privacy policy, and FAQS."
         canonicalUrl={`/info?tab=${activeTab}`}
         schema={faqSchema}
       />
@@ -101,7 +101,7 @@ export const Info = () => {
           Help & Legal Hub
         </h1>
         <p className="text-center text-brand-text/60 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
-          Everything you need to know about navigating the Falooda & Co experience, transparently and safely.
+          Everything you need to know about navigating the Taste of Village experience, transparently and safely.
         </p>
 
         <div className="flex flex-col md:flex-row gap-10">
@@ -155,12 +155,12 @@ export const Info = () => {
                 <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-2xl">
                   <p className="text-red-800 font-bold text-lg mb-2">CRITICAL NOTICE REGARDING SEVERE ALLERGIES</p>
                   <p className="text-red-700 leading-relaxed">
-                    Falooda & Co operates a thriving, open kitchen where cross-contamination is a fundamental risk. We use shared equipment to prepare items containing severe allergens.
+                    Taste of Village operates a thriving, open kitchen where cross-contamination is a fundamental risk. We use shared equipment to prepare items containing severe allergens.
                   </p>
                 </div>
                 
                 <div className="space-y-4 text-brand-text/80 leading-relaxed">
-                  <p><strong>NUTS & SEEDS:</strong> Pistachios, almonds, peanuts, and various seeds are standard ingredients scattered freely across our kitchen and used heavily in our Faloodas, Chaats, and Desserts. <strong>If you have a severe nut allergy, we strongly advise against dining with us to guarantee your safety.</strong></p>
+                  <p><strong>NUTS & SEEDS:</strong> Pistachios, almonds, peanuts, and various seeds are standard ingredients scattered freely across our kitchen and used heavily in our Taste of Villages, Chaats, and Desserts. <strong>If you have a severe nut allergy, we strongly advise against dining with us to guarantee your safety.</strong></p>
                   
                   <p><strong>DAIRY:</strong> Fast-moving dairy (milk, ice cream, kulfi, yogurt) forms the bedrock of our menu. Very few items are truly dairy-free, and cross-contamination is highly likely.</p>
 
@@ -188,7 +188,7 @@ export const Info = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-brand-text mb-3">Sourcing</h3>
-                    <p>We source our dairy from local, traceable British farms, while importing our authentic spices, Rooh Afza, and specialized Falooda noodles from certified South Asian suppliers to preserve the true heritage taste.</p>
+                    <p>We source our dairy from local, traceable British farms, while importing our authentic spices, Rooh Afza, and specialized Taste of Village noodles from certified South Asian suppliers to preserve the true heritage taste.</p>
                   </div>
                 </div>
               </div>
@@ -224,7 +224,7 @@ export const Info = () => {
                 <h2 className="font-display text-3xl font-bold text-brand-text flex items-center gap-3 border-b pb-4"><Shield className="text-gray-500"/> Privacy Policy</h2>
                 
                 <div className="space-y-6 text-brand-text/80 leading-relaxed">
-                  <p>Falooda & Co ("we", "our", "us") respects your privacy. This policy outlines how we collect, process, and protect your data.</p>
+                  <p>Taste of Village ("we", "our", "us") respects your privacy. This policy outlines how we collect, process, and protect your data.</p>
 
                   <div>
                     <h3 className="text-xl font-bold text-brand-text mb-2">What We Collect</h3>
@@ -252,7 +252,7 @@ export const Info = () => {
                 <h2 className="font-display text-3xl font-bold text-brand-text flex items-center gap-3 border-b pb-4"><MapPin className="text-brand-pink"/> Terms & Conditions</h2>
                 
                 <div className="space-y-6 text-brand-text/80 leading-relaxed">
-                  <p>Welcome to Falooda & Co. By using this website to place orders or book tables, you agree to the following terms:</p>
+                  <p>Welcome to Taste of Village. By using this website to place orders or book tables, you agree to the following terms:</p>
                   
                   <ul className="list-disc pl-5 space-y-3">
                     <li><strong>Service Availability:</strong> We reserve the right to refuse service, cancel orders, or close the store early during extremely busy periods or unforeseen circumstances.</li>

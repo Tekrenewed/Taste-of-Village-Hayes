@@ -53,7 +53,7 @@ export const ReviewGate = () => {
               className="text-center space-y-8"
             >
               <div className="space-y-2">
-                <img src="/logo.png" alt="Falooda & Co" className="h-12 mx-auto mb-6" />
+                <img src="/logo.png" alt="Taste of Village" className="h-12 mx-auto mb-6" />
                 <h1 className="text-3xl font-display font-black text-brand-obsidian leading-tight">How was your<br/><span className="text-brand-pink italic">experience</span> today?</h1>
                 <p className="text-brand-obsidian/40 font-medium">Your feedback helps us grow.</p>
               </div>

@@ -347,7 +347,7 @@ export const StoreProvider = ({ children }: { children: ReactNode }) => {
           order.total
         ).catch(err => console.error('[CRM] Loyalty update failed:', err));
 
-        // Process loyalty rewards (5th falooda free, 5th chaat free, spend milestones)
+        // Process loyalty rewards (5th taste-of-village free, 5th chaat free, spend milestones)
         import('../services/loyaltyService').then(({ processOrderForLoyalty, getCustomerProfile }) => {
           processOrderForLoyalty(order).then(async (newRewards) => {
             if (newRewards.length > 0) {

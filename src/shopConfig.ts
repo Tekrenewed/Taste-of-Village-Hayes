@@ -1,5 +1,5 @@
 /**
- * Falooda & Co — Central Shop Configuration
+ * Taste of Village — Central Shop Configuration
  * 
  * UPDATE THESE VALUES with your real shop details.
  * Every component reads from here, so you only need to change them once.

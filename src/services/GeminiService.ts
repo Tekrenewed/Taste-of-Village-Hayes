@@ -27,7 +27,7 @@ export const GeminiService = {
   async getStaffingInsight(weatherData: any, currentOrdersCount: number): Promise<StaffingRecommendation> {
     try {
       const prompt = `
-        As an expert restaurant manager for "Falooda & Co" (luxury dessert shop in Slough), 
+        As an expert restaurant manager for "Taste of Village" (luxury dessert shop in Slough), 
         analyze the following data and provide a staffing recommendation.
         
         DATA:
@@ -84,7 +84,7 @@ export const GeminiService = {
   async getPredictivePrep(weatherData: any, currentOrdersCount: number): Promise<PredictivePrep> {
     try {
       const prompt = `
-        Analyze for "Falooda & Co" (Slough, UK):
+        Analyze for "Taste of Village" (Slough, UK):
         - Weather: ${weatherData.temp}°C, ${weatherData.description}
         - Current Workload: ${currentOrdersCount} orders
         

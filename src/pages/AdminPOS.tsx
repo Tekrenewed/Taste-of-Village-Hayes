@@ -5,7 +5,7 @@ import { useStore } from '../context/StoreContext';
 import { MenuItem, Order, CartItem, CustomerProfile, Reward } from '../types';
 import QRCode from 'react-qr-code';
 import { ROADMAP_QUESTIONS } from '../constants';
-import { FaloodaTelemetry } from '../lib/telemetry';
+import { Taste of VillageTelemetry } from '../lib/telemetry';
 
 // Local POS Sub-components & Services
 import { SIZE_VARIATIONS, ITEM_MODIFIERS } from './AdminPOS/PosConstants';

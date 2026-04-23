@@ -9,19 +9,19 @@ export const SloughDesserts = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "The Best Late Night Halal Desserts in Slough",
-    "image": "https://faloodaandco.co.uk/assets/hero_tile.png",
+    "image": "https://taste-of-villageandco.co.uk/assets/hero_tile.png",
     "author": {
       "@type": "Organization",
-      "name": "Falooda & Co"
+      "name": "Taste of Village"
     },
-    "description": "Discover Slough's premier destination for luxury halal desserts. From Pistachio Royal Falooda to hot Cookie Dough, we are open late on Farnham Road."
+    "description": "Discover Slough's premier destination for luxury halal desserts. From Pistachio Royal Taste of Village to hot Cookie Dough, we are open late on Farnham Road."
   });
 
   return (
     <div className="bg-brand-cream min-h-screen pt-20 pb-20 font-sans">
       <SEOHead 
         title="Best Halal Desserts in Slough" 
-        description="Looking for the best desserts in Slough? Falooda & Co on Farnham Road serves luxury halal desserts, hot cookie dough, and our signature Falooda until midnight."
+        description="Looking for the best desserts in Slough? Taste of Village on Farnham Road serves luxury halal desserts, hot cookie dough, and our signature Taste of Village until midnight."
         canonicalUrl="/slough-desserts"
         schema={schema}
       />
@@ -35,7 +35,7 @@ export const SloughDesserts = () => {
           <span className="text-brand-electricPeach font-bold tracking-widest uppercase text-xs mb-4 block">The Jewel of Farnham Road</span>
           <h1 className="font-serif text-5xl md:text-6xl text-brand-text mb-6">Slough's Best Late Night Halal Desserts</h1>
           <p className="text-lg text-brand-text/70 leading-relaxed max-w-2xl mx-auto">
-            Right in the heart of Slough, Falooda & Co is redefining the local dessert scene. From intensely rich Pistachio Falooda to freshly baked hot cookie dough, we serve pure luxury.
+            Right in the heart of Slough, Taste of Village is redefining the local dessert scene. From intensely rich Pistachio Taste of Village to freshly baked hot cookie dough, we serve pure luxury.
           </p>
         </motion.div>
 
@@ -63,13 +63,13 @@ export const SloughDesserts = () => {
             transition={{ delay: 0.3 }}
             className="bg-brand-pinkLight p-10 rounded-[3rem]"
           >
-            <h2 className="font-serif text-3xl mb-4 text-brand-text">The Famous Falooda</h2>
+            <h2 className="font-serif text-3xl mb-4 text-brand-text">The Famous Taste of Village</h2>
             <p className="text-brand-text/70 leading-relaxed mb-6">
-              Our namesake dessert is what put us on the map. The Royal Heritage Falooda is the ultimate late-night street food treat, perfectly balancing Rooh Afza, basil seeds, and rich traditional Kulfi.
+              Our namesake dessert is what put us on the map. The Royal Heritage Taste of Village is the ultimate late-night street food treat, perfectly balancing Rooh Afza, basil seeds, and rich traditional Kulfi.
             </p>
             <ul className="space-y-3 font-semibold text-brand-text">
-              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> The Royal Heritage Falooda</li>
-              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> Pistachio Royale Falooda</li>
+              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> The Royal Heritage Taste of Village</li>
+              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> Pistachio Royale Taste of Village</li>
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> The Salted Sunset</li>
             </ul>
           </motion.div>

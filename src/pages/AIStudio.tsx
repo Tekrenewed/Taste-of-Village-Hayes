@@ -117,7 +117,7 @@ export const AIStudio = () => {
                   <span className="font-bold">Google Pro AI Insight:</span> "Slow-motion caramel drips over crushed pistachios" is currently trending on Instagram Reels in the UK dessert space.
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {['#PistachioFalooda', '#ASMRDessert', '#SlowMoPour', '#DubaiChocolate'].map(tag => (
+                  {['#PistachioTaste of Village', '#ASMRDessert', '#SlowMoPour', '#DubaiChocolate'].map(tag => (
                     <span key={tag} className="px-3 py-1 bg-brand-pistachio/20 text-brand-green font-bold text-xs rounded-full">
                       {tag}
                     </span>
@@ -181,12 +181,12 @@ export const AIStudio = () => {
               <textarea 
                 value={promptInput}
                 onChange={(e) => setPromptInput(e.target.value)}
-                placeholder="e.g., A cinematic close-up of a royal falooda, rich pink syrup slowly dripping down the frosted glass, soft ambient lighting, 4k, hyper-realistic food photography..."
+                placeholder="e.g., A cinematic close-up of a royal taste-of-village, rich pink syrup slowly dripping down the frosted glass, soft ambient lighting, 4k, hyper-realistic food photography..."
                 className="w-full h-32 p-4 rounded-xl border border-brand-text/10 bg-brand-cream/20 focus:outline-none focus:ring-2 focus:ring-brand-pink transition-all resize-none"
               />
               <div className="flex justify-between items-center mt-2">
                 <button 
-                  onClick={() => setPromptInput("A cinematic 4k close up of rich pistachio ice cream being scooped into a Falooda glass, slow motion, shallow depth of field, warm lighting")}
+                  onClick={() => setPromptInput("A cinematic 4k close up of rich pistachio ice cream being scooped into a Taste of Village glass, slow motion, shallow depth of field, warm lighting")}
                   className="text-xs text-brand-pink font-bold hover:underline flex items-center gap-1"
                 >
                   <RefreshCw className="h-3 w-3" /> Auto-fill from Viral Trend

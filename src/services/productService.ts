@@ -88,7 +88,7 @@ export async function fetchLiveMenu(): Promise<FullMenuItem[]> {
 function formatCategory(dbCat: string): string {
   const c = dbCat.toLowerCase();
   const MAP: Record<string, string> = {
-    'falooda':           'falooda',
+    'taste-of-village':           'taste-of-village',
     'dessert':           'dessert',
     'signature dessert': 'signature_desserts',
     'grill':             'chaat',

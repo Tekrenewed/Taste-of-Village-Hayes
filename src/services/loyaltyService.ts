@@ -17,12 +17,12 @@ const CUSTOMERS_COLLECTION = 'customers';
 // These are the active rules. Configurable from admin in the future.
 export const DEFAULT_REWARD_RULES: RewardRule[] = [
   {
-    id: 'falooda_5th_free',
+    id: 'taste-of-village_5th_free',
     type: 'category_milestone',
-    category: 'falooda',
+    category: 'taste-of-village',
     threshold: 5,
     rewardType: 'free_item',
-    description: 'Every 5th falooda is on us! 🍨',
+    description: 'Every 5th taste-of-village is on us! 🍨',
     active: true,
   },
   {

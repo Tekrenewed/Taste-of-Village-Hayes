@@ -91,7 +91,7 @@ export const TrackLanding = () => {
     <div className="min-h-screen bg-gradient-to-b from-brand-cream via-white to-brand-cream/30 relative overflow-hidden">
       <SEOHead 
         title="Track Your Order"
-        description="Track your Falooda & Co order in real-time. Enter your order number or phone number to see live preparation status and estimated pickup time."
+        description="Track your Taste of Village order in real-time. Enter your order number or phone number to see live preparation status and estimated pickup time."
         canonicalUrl="/track"
       />
 

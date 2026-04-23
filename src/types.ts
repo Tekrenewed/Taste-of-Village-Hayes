@@ -74,10 +74,10 @@ export type ViewMode = 'customer' | 'admin';
 export interface Reward {
   id: string;
   type: 'free_item' | 'discount_percent' | 'discount_fixed';
-  itemName?: string;           // e.g. "Rose Falooda" — for free_item rewards
-  category?: string;           // e.g. "falooda" — for category-level rewards
+  itemName?: string;           // e.g. "Rose Taste of Village" — for free_item rewards
+  category?: string;           // e.g. "taste-of-village" — for category-level rewards
   value?: number;              // discount amount (% or £)
-  reason: string;              // "5th falooda milestone"
+  reason: string;              // "5th taste-of-village milestone"
   status: 'available' | 'redeemed' | 'expired';
   createdAt: Date;
   expiresAt: Date;
@@ -92,8 +92,8 @@ export interface CustomerProfile {
   phone: string;
   totalOrders: number;
   totalSpent: number;
-  itemCounts: Record<string, number>;   // { "f_rose_falooda": 4, "c_samosa_chaat": 3 }
-  categoryCounts: Record<string, number>; // { "falooda": 8, "chaat": 5 }
+  itemCounts: Record<string, number>;   // { "f_rose_taste-of-village": 4, "c_samosa_chaat": 3 }
+  categoryCounts: Record<string, number>; // { "taste-of-village": 8, "chaat": 5 }
   rewards: Reward[];
   qrCode?: string;             // Base64 QR for kiosk scanning
   joinedAt: Date;
@@ -103,11 +103,11 @@ export interface CustomerProfile {
 export interface RewardRule {
   id: string;
   type: 'item_milestone' | 'category_milestone' | 'spend_milestone';
-  category?: string;           // "falooda", "chaat"
+  category?: string;           // "taste-of-village", "chaat"
   threshold: number;           // every Nth item/£N spent
   rewardType: 'free_item' | 'discount_percent' | 'discount_fixed';
   rewardValue?: number;
-  description: string;         // "Every 5th falooda is free!"
+  description: string;         // "Every 5th taste-of-village is free!"
   active: boolean;
 }
 

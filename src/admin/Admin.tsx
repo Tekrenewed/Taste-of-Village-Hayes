@@ -26,7 +26,7 @@ export default function Admin() {
                 setItems([
                     { id: '1', name: 'Chicken Tikka Masala', category: 'Curry', base_price: 10.99 },
                     { id: '2', name: 'Peri Peri Half Chicken', category: 'Grill', base_price: 8.99 },
-                    { id: '3', name: 'Mango Falooda', category: 'Dessert', base_price: 6.99 },
+                    { id: '3', name: 'Mango Taste of Village', category: 'Dessert', base_price: 6.99 },
                     { id: '4', name: 'Lamb Rogan Josh', category: 'Curry', base_price: 12.99 },
                     { id: '5', name: 'Loaded Fries', category: 'Grill', base_price: 4.99 },
                 ]);

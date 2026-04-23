@@ -4,23 +4,23 @@ import { Link } from 'react-router-dom';
 import { Sparkles, MapPin, Clock, Car } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 
-export const UxbridgeFalooda = () => {
+export const UxbridgeTaste of Village = () => {
   const schema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Authentic Falooda & Halal Desserts near Uxbridge",
-    "image": "https://faloodaandco.co.uk/assets/hero_tile.png",
-    "author": { "@type": "Organization", "name": "Falooda & Co" },
-    "publisher": { "@type": "Organization", "name": "Falooda & Co" },
-    "description": "Uxbridge residents are discovering Falooda & Co on Farnham Road, Slough — just 25 minutes away for luxury halal faloodas, Indian chaats, and cookie dough."
+    "headline": "Authentic Taste of Village & Halal Desserts near Uxbridge",
+    "image": "https://taste-of-villageandco.co.uk/assets/hero_tile.png",
+    "author": { "@type": "Organization", "name": "Taste of Village" },
+    "publisher": { "@type": "Organization", "name": "Taste of Village" },
+    "description": "Uxbridge residents are discovering Taste of Village on Farnham Road, Slough — just 25 minutes away for luxury halal taste-of-villages, Indian chaats, and cookie dough."
   });
 
   return (
     <div className="bg-brand-cream min-h-screen pt-20 pb-20 font-sans">
       <SEOHead 
-        title="Falooda & Halal Desserts near Uxbridge | Falooda & Co" 
-        description="Looking for authentic falooda near Uxbridge? Falooda & Co in Slough is just 25 minutes away — luxury halal desserts, Indian street food, and chaats until midnight."
-        canonicalUrl="/uxbridge-falooda"
+        title="Taste of Village & Halal Desserts near Uxbridge | Taste of Village" 
+        description="Looking for authentic taste-of-village near Uxbridge? Taste of Village in Slough is just 25 minutes away — luxury halal desserts, Indian street food, and chaats until midnight."
+        canonicalUrl="/uxbridge-taste-of-village"
         schema={schema}
       />
       
@@ -31,9 +31,9 @@ export const UxbridgeFalooda = () => {
           className="text-center mb-16"
         >
           <span className="text-brand-electricPeach font-bold tracking-widest uppercase text-xs mb-4 block">25 Minutes from Uxbridge</span>
-          <h1 className="font-serif text-5xl md:text-6xl text-brand-text mb-6">Uxbridge's Favourite Falooda Destination</h1>
+          <h1 className="font-serif text-5xl md:text-6xl text-brand-text mb-6">Uxbridge's Favourite Taste of Village Destination</h1>
           <p className="text-lg text-brand-text/70 leading-relaxed max-w-2xl mx-auto">
-            Uxbridge has chains, but nothing like Falooda & Co. A short drive along the A4020 and M40 brings you to Slough's most talked-about dessert parlour — where every falooda is hand-crafted and every chaat is made fresh.
+            Uxbridge has chains, but nothing like Taste of Village. A short drive along the A4020 and M40 brings you to Slough's most talked-about dessert parlour — where every taste-of-village is hand-crafted and every chaat is made fresh.
           </p>
         </motion.div>
 
@@ -44,13 +44,13 @@ export const UxbridgeFalooda = () => {
             transition={{ delay: 0.2 }}
             className="obsidian-card p-10 rounded-[3rem] bg-brand-obsidian text-white"
           >
-            <h2 className="font-serif text-3xl mb-4 text-brand-electricPeach">The Falooda Experience</h2>
+            <h2 className="font-serif text-3xl mb-4 text-brand-electricPeach">The Taste of Village Experience</h2>
             <p className="text-white/70 leading-relaxed mb-6">
-              Our faloodas aren't just drinks — they're a layered dessert experience. From the signature Rose Falooda to the indulgent Pistachio Royale, each glass is assembled to order with premium kulfi, vermicelli, and aromatic syrups.
+              Our taste-of-villages aren't just drinks — they're a layered dessert experience. From the signature Rose Taste of Village to the indulgent Pistachio Royale, each glass is assembled to order with premium kulfi, vermicelli, and aromatic syrups.
             </p>
             <ul className="space-y-3 font-semibold text-brand-pinkLight">
-              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Rose Falooda</li>
-              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Pistachio Royale Falooda</li>
+              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Rose Taste of Village</li>
+              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Pistachio Royale Taste of Village</li>
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Fresh Samosa & Dahi Puri Chaat</li>
             </ul>
           </motion.div>
@@ -87,7 +87,7 @@ export const UxbridgeFalooda = () => {
         >
           <h2 className="font-serif text-4xl mb-6">Visit Us from Uxbridge Today</h2>
           <p className="text-brand-text/70 leading-relaxed max-w-xl mx-auto mb-10">
-            Join the growing number of Uxbridge locals who've made Falooda & Co their go-to spot for authentic halal desserts and Indian street food classics.
+            Join the growing number of Uxbridge locals who've made Taste of Village their go-to spot for authentic halal desserts and Indian street food classics.
           </p>
           
           <div className="flex justify-center gap-4">

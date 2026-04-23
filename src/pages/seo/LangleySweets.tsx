@@ -9,19 +9,19 @@ export const LangleySweets = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Traditional South Asian Sweets & Halal Desserts Near Langley",
-    "image": "https://faloodaandco.co.uk/assets/hero_tile.png",
+    "image": "https://taste-of-villageandco.co.uk/assets/hero_tile.png",
     "author": {
       "@type": "Organization",
-      "name": "Falooda & Co"
+      "name": "Taste of Village"
     },
-    "description": "Looking for South Asian sweets and family-friendly halal desserts near Langley? Visit Falooda & Co for authentic falooda, kulfi, and Karak Chai."
+    "description": "Looking for South Asian sweets and family-friendly halal desserts near Langley? Visit Taste of Village for authentic taste-of-village, kulfi, and Karak Chai."
   });
 
   return (
     <div className="bg-brand-cream min-h-screen pt-20 pb-20 font-sans">
       <SEOHead 
         title="South Asian Sweets & Desserts Near Langley" 
-        description="Just down the road from Langley, Falooda & Co serves authentic South Asian sweets, halal cookie dough, and premium Falooda for the whole family."
+        description="Just down the road from Langley, Taste of Village serves authentic South Asian sweets, halal cookie dough, and premium Taste of Village for the whole family."
         canonicalUrl="/langley-sweets"
         schema={schema}
       />
@@ -35,7 +35,7 @@ export const LangleySweets = () => {
           <span className="text-brand-electricPeach font-bold tracking-widest uppercase text-xs mb-4 block">Serving the Langley Community</span>
           <h1 className="font-serif text-5xl md:text-6xl text-brand-text mb-6">Traditional Sweets & Family Desserts</h1>
           <p className="text-lg text-brand-text/70 leading-relaxed max-w-2xl mx-auto">
-            Located just moments from Langley, Falooda & Co provides a premium, family-friendly environment focusing on authentic South Asian dessert heritage and modern halal treats.
+            Located just moments from Langley, Taste of Village provides a premium, family-friendly environment focusing on authentic South Asian dessert heritage and modern halal treats.
           </p>
         </motion.div>
 
@@ -51,7 +51,7 @@ export const LangleySweets = () => {
               Share the authentic tastes of back home with the next generation. We specialize in traditional recipes that refuse to cut corners, offering the finest South Asian sweets and refreshing beverages in the area.
             </p>
             <ul className="space-y-3 font-semibold text-brand-pinkLight">
-              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> The Royal Heritage Falooda</li>
+              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> The Royal Heritage Taste of Village</li>
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Authentic Mango Lassi</li>
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Traditional Kulfi Cuts</li>
             </ul>

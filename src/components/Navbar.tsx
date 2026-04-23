@@ -49,7 +49,7 @@ export const Navbar = () => {
           <Link to="/" className="flex items-center group" onDoubleClick={handleAdminClick} title="Double-click for Staff Access">
             <img
               src="/assets/logo_real.png"
-              alt="Falooda & Co"
+              alt="Taste of Village"
               className="h-[42px] w-auto object-contain mix-blend-multiply"
              onError={(e: any) => { e.target.onerror = null; e.target.src = '/assets/placeholder.png'; }} />
           </Link>
@@ -134,7 +134,7 @@ export const Navbar = () => {
              <div className="flex-1 overflow-y-auto px-6 py-8 space-y-6 flex flex-col font-sans">
                 <Link to="/" className={`text-xl font-bold flex items-center gap-3 ${isActive('/')}`}>Home</Link>
                 <Link to="/menu" className={`text-xl font-bold flex items-center gap-3 ${isActive('/menu')}`}>Our Menu</Link>
-                <Link to="/build-your-own" className={`text-xl font-bold flex items-center gap-3 ${isActive('/build-your-own')}`}>🍨 Build Falooda</Link>
+                <Link to="/build-your-own" className={`text-xl font-bold flex items-center gap-3 ${isActive('/build-your-own')}`}>🍨 Build Taste of Village</Link>
                 <Link to="/build-your-own-chaat" className={`text-xl font-bold flex items-center gap-3 ${isActive('/build-your-own-chaat')}`}>🥟 Build Chaat</Link>
                 <Link to="/franchise" className={`text-xl font-bold flex items-center gap-3 ${isActive('/franchise')}`}>🏢 Franchise</Link>
                 <Link to="/rewards" className={`text-xl font-bold flex items-center gap-3 ${isActive('/rewards')}`}>🎁 Rewards</Link>

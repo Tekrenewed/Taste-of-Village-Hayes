@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 // Constants
 const STORE_ID = 'f4100da2-1111-1111-1111-000000000001';
-const BASE_URL = 'https://www.faloodaandco.co.uk/#/order';
+const BASE_URL = 'https://www.taste-of-villageandco.co.uk/#/order';
 const NUM_TABLES = 10;
 const OUTPUT_DIR = path.join(__dirname, '..', 'qr_outputs');
 

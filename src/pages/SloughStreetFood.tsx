@@ -9,28 +9,28 @@ export const SloughStreetFood = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "The Ultimate Guide to Authentic Pakistani & Indian Street Food on Farnham Road, Slough",
-    "image": "https://faloodaandco.co.uk/assets/hero_tile.png",
+    "image": "https://taste-of-villageandco.co.uk/assets/hero_tile.png",
     "author": {
       "@type": "Organization",
-      "name": "Falooda & Co"
+      "name": "Taste of Village"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Falooda & Co",
+      "name": "Taste of Village",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://faloodaandco.co.uk/assets/logo_real.png"
+        "url": "https://taste-of-villageandco.co.uk/assets/logo_real.png"
       }
     },
     "datePublished": "2026-04-08",
-    "description": "Discover late-night chaat, halal desserts, and the best fusion of Pakistani and Indian street food exclusively at Falooda & Co on Farnham Road, Slough."
+    "description": "Discover late-night chaat, halal desserts, and the best fusion of Pakistani and Indian street food exclusively at Taste of Village on Farnham Road, Slough."
   });
 
   return (
     <div className="bg-brand-cream min-h-screen pt-20 pb-20 font-sans">
       <SEOHead 
         title="Pakistani & Indian Street Food Slough" 
-        description="Craving late-night halal desserts or authentic Pakistani and Indian street food? Visit Falooda & Co on Farnham Road, Slough for Samosa Chaat, Royal Falooda, and more."
+        description="Craving late-night halal desserts or authentic Pakistani and Indian street food? Visit Taste of Village on Farnham Road, Slough for Samosa Chaat, Royal Taste of Village, and more."
         canonicalUrl="/slough-street-food"
         schema={schema}
       />
@@ -57,7 +57,7 @@ export const SloughStreetFood = () => {
           >
             <h2 className="font-serif text-3xl mb-4 text-brand-electricPeach">Late Night Chaat & Savoury Fusion</h2>
             <p className="text-white/70 leading-relaxed mb-6">
-              When the cravings hit, nothing beats the perfect balance of sweet, spicy, and tangy. Our signature <strong>Falooda & Co Special Chaat</strong> and warm <strong>Samosa Chaat</strong> are crafted using authentic Indian street food recipes and rich Pakistani spices. It's the ultimate comfort food for Slough locals looking for genuine desi flavors.
+              When the cravings hit, nothing beats the perfect balance of sweet, spicy, and tangy. Our signature <strong>Taste of Village Special Chaat</strong> and warm <strong>Samosa Chaat</strong> are crafted using authentic Indian street food recipes and rich Pakistani spices. It's the ultimate comfort food for Slough locals looking for genuine desi flavors.
             </p>
             <ul className="space-y-3 font-semibold text-brand-pinkLight">
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Crispy Papdi Chaat</li>
@@ -74,10 +74,10 @@ export const SloughStreetFood = () => {
           >
             <h2 className="font-serif text-3xl mb-4 text-brand-text">Premium Halal Desserts</h2>
             <p className="text-brand-text/70 leading-relaxed mb-6">
-              A meal isn't complete without something sweet. We pride ourselves on offering luxury halal desserts that look as good as they taste. Our <strong>Royal Heritage Falooda</strong> blends Rooh Afza, chilled milk, and rich kulfi, making it the finest traditional dessert in Slough.
+              A meal isn't complete without something sweet. We pride ourselves on offering luxury halal desserts that look as good as they taste. Our <strong>Royal Heritage Taste of Village</strong> blends Rooh Afza, chilled milk, and rich kulfi, making it the finest traditional dessert in Slough.
             </p>
             <ul className="space-y-3 font-semibold text-brand-text">
-              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> Pistachio Royale Falooda</li>
+              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> Pistachio Royale Taste of Village</li>
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> The Golden Monsoon (Mango)</li>
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-gold" /> San Sebastian Cheesecake</li>
             </ul>
@@ -92,7 +92,7 @@ export const SloughStreetFood = () => {
         >
           <h2 className="font-serif text-4xl mb-6">Visit Slough's Premier Dessert Parlour</h2>
           <p className="text-brand-text/70 leading-relaxed max-w-xl mx-auto mb-10">
-            Whether you're looking for a quick Karak Chai catch-up, late-night Pakistani street food, or a luxury dining experience with artisanal halal desserts, Falooda & Co is your destination.
+            Whether you're looking for a quick Karak Chai catch-up, late-night Pakistani street food, or a luxury dining experience with artisanal halal desserts, Taste of Village is your destination.
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10">

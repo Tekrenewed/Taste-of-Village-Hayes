@@ -108,7 +108,7 @@ export const Admin = () => {
       {/* Sidebar */}
       <aside className="w-64 bg-brand-text text-white flex flex-col">
         <div className="p-6 border-b border-gray-800">
-          <h2 className="font-display text-2xl font-bold text-brand-pink">Falooda OS</h2>
+          <h2 className="font-display text-2xl font-bold text-brand-pink">Taste of Village OS</h2>
           <p className="text-xs text-brand-text/60 mt-1">v1.0.0 Local Build</p>
         </div>
         <nav className="flex-1 p-4 space-y-2">
@@ -175,7 +175,7 @@ export const Admin = () => {
             <div className="flex justify-between items-center mb-8">
               <div>
                 <h2 className="font-display text-3xl font-bold text-brand-text">Builder Settings CMS</h2>
-                <p className="text-gray-500">Configure ingredient prices and options for Make-Your-Own Faloodas.</p>
+                <p className="text-gray-500">Configure ingredient prices and options for Make-Your-Own Taste of Villages.</p>
               </div>
               <button onClick={handleSaveBuilderConfig} className="bg-brand-pistachio text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-pistachio/90 shadow-md">
                 Publish Configuration
@@ -185,7 +185,7 @@ export const Admin = () => {
             <div className="mb-8 p-6 bg-white rounded-3xl border border-brand-rose/50 shadow-sm flex items-center justify-between">
               <div>
                 <h3 className="font-bold text-lg text-gray-800">Starting Base Price</h3>
-                <p className="text-xs text-gray-500">The fixed cost of the Falooda before any premium additions.</p>
+                <p className="text-xs text-gray-500">The fixed cost of the Taste of Village before any premium additions.</p>
               </div>
               <div className="w-32 flex items-center border border-gray-300 rounded px-3 py-2 bg-gray-50">
                  <span className="text-gray-400 mr-1">£</span>
@@ -396,7 +396,7 @@ export const Admin = () => {
             <div className="flex justify-between items-center mb-8">
               <div>
                 <h2 className="font-display text-3xl font-bold text-brand-dark mb-2">Website Collections</h2>
-                <p className="text-gray-600">Full historical log of every single order coming from the Falooda & Co website.</p>
+                <p className="text-gray-600">Full historical log of every single order coming from the Taste of Village website.</p>
               </div>
               <div className="bg-brand-pistachio text-white font-bold p-4 rounded-xl shadow border border-brand-pistachio/50 grid grid-cols-2 gap-8 text-center text-brand-text">
                 <div>

@@ -33,7 +33,7 @@ export default function KDS() {
                 id: 'POS-001A',
                 source: 'POS',
                 created_at: new Date(Date.now() - 120000).toISOString(),
-                items: [{ id: '3', name: 'Mango Falooda', price_paid: 6.99 }]
+                items: [{ id: '3', name: 'Mango Taste of Village', price_paid: 6.99 }]
             },
             {
                 id: 'DEL-X9K',

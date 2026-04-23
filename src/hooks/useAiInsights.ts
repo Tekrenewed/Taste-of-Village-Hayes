@@ -5,7 +5,7 @@ import { GeminiService, StaffingRecommendation, PredictivePrep } from '../servic
 /**
  * useAiInsights
  * 
- * Encapsulates the "AI Operational Brain" for Falooda & Co:
+ * Encapsulates the "AI Operational Brain" for Taste of Village:
  * - Hyperlocal weather data (OpenWeatherMap, hourly refresh)
  * - Gemini-powered staffing recommendations
  * - Real-time clock for KDS timestamps

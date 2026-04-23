@@ -215,14 +215,14 @@ export const Book = () => {
 
   // Available menu items for pre-ordering
   const preOrderMenuItems = MENU_ITEMS.filter(item => 
-    ['falooda', 'chaat', 'dessert'].includes(item.category)
+    ['taste-of-village', 'chaat', 'dessert'].includes(item.category)
   );
 
   return (
     <div className="min-h-screen bg-brand-cacao flex items-center justify-center p-4 py-24">
       <SEOHead 
         title="Book a Table" 
-        description="Reserve your table at Falooda & Co in Slough. Pre-order your food so it's ready when you arrive."
+        description="Reserve your table at Taste of Village in Slough. Pre-order your food so it's ready when you arrive."
         canonicalUrl="/book"
       />
       <div className="bg-white/90 backdrop-blur-md w-full max-w-lg p-8 rounded-3xl shadow-xl border border-brand-rose">

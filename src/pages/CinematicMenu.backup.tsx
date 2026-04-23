@@ -5,7 +5,7 @@ import { MENU_ITEMS } from '../constants';
 
 // Organize and map category IDs to display titles
 const CATEGORY_MAP: Record<string, { title: string, subtitle?: string }> = {
-  falooda: { title: "Signature Falooda", subtitle: "Where our story began. Authentic, rich, and unforgettable." },
+  taste-of-village: { title: "Signature Taste of Village", subtitle: "Where our story began. Authentic, rich, and unforgettable." },
   milkshake: { title: "Royal Milkshakes", subtitle: "Thick, creamy, and spun with premium ingredients." },
   dessert: { title: "Sweet Indulgences", subtitle: "Traditional Meetha (Desserts) to satisfy your soul." },
   signature_desserts: { title: "Signature Desserts", subtitle: "Decadent creations crafted for the ultimate treat." },
@@ -83,7 +83,7 @@ export const CinematicMenu = () => {
 
   // Grouping categories into massive visual blocks
   const sections = [
-    { name: "The Classics", categories: ["falooda", "milkshake", "chaat", "street_food"] },
+    { name: "The Classics", categories: ["taste-of-village", "milkshake", "chaat", "street_food"] },
     { name: "Savoury & Lunch", categories: ["lunch", "salad"] },
     { name: "Morning Rituals", categories: ["english_breakfast", "desi_breakfast", "sweet_breakfast", "breakfast_drinks"] },
     { name: "The Sweet Finale", categories: ["signature_desserts", "cake", "dessert", "ice_cream"] },
@@ -93,8 +93,8 @@ export const CinematicMenu = () => {
   return (
     <div className="min-h-screen bg-[#070707] font-sans selection:bg-[#F8BBD0] selection:text-black">
       <SEOHead 
-        title="Menu | Falooda & Co." 
-        description="Explore the cinematic menu of Falooda & Co. Indulge in premium desserts, signature faloodas, authentic chaat, and artisan breakfasts."
+        title="Menu | Taste of Village." 
+        description="Explore the cinematic menu of Taste of Village. Indulge in premium desserts, signature taste-of-villages, authentic chaat, and artisan breakfasts."
       />
 
       {/* Hero Section */}
@@ -110,7 +110,7 @@ export const CinematicMenu = () => {
         >
           <source src={`/assets/videos/Reel 2.mov`} type="video/mp4" />
           {/* Fallback to mural if video missing */}
-          <img src="/assets/hero_mural.png" alt="Falooda & Co" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+          <img src="/assets/hero_mural.png" alt="Taste of Village" className="absolute inset-0 w-full h-full object-cover opacity-30" />
         </video>
         
         {/* Film Grain Overlay */}
@@ -133,7 +133,7 @@ export const CinematicMenu = () => {
             </h1>
             <div className="flex items-center justify-center space-x-4">
               <div className="h-[1px] w-12 bg-[#F8BBD0]"></div>
-              <span className="text-gray-300 italic font-serif text-lg md:text-2xl">Falooda & Co.</span>
+              <span className="text-gray-300 italic font-serif text-lg md:text-2xl">Taste of Village.</span>
               <div className="h-[1px] w-12 bg-[#F8BBD0]"></div>
             </div>
           </motion.div>
@@ -184,7 +184,7 @@ export const CinematicMenu = () => {
 
         {/* Footer closing mark */}
         <div className="py-20 text-center flex flex-col items-center border-t border-gray-900 mt-20">
-          <img src="/assets/logo_real.png" alt="Falooda & Co" className="h-20 w-auto opacity-50 grayscale hover:grayscale-0 transition-all duration-700 mb-8" />
+          <img src="/assets/logo_real.png" alt="Taste of Village" className="h-20 w-auto opacity-50 grayscale hover:grayscale-0 transition-all duration-700 mb-8" />
           <p className="text-gray-500 font-serif italic text-xl">Thank you for joining our table.</p>
           <p className="text-gray-700 text-sm mt-4 tracking-widest uppercase">268 Farnham Rd, Slough</p>
         </div>

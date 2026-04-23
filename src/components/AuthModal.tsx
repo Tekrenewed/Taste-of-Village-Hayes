@@ -85,7 +85,7 @@ export const AuthModal = ({ isOpen, onClose, defaultTab = 'login' }: AuthModalPr
         {/* Header */}
         <div className="text-center mb-8">
           <h2 className="font-display text-3xl font-bold text-brand-text">
-            {tab === 'login' ? 'Welcome Back' : 'Join Falooda & Co'}
+            {tab === 'login' ? 'Welcome Back' : 'Join Taste of Village'}
           </h2>
           <p className="text-brand-text/50 text-sm mt-2">
             {tab === 'login' ? 'Sign in via magic link to view your rewards' :

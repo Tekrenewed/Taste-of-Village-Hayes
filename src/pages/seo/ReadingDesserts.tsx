@@ -9,17 +9,17 @@ export const ReadingDesserts = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Luxury Halal Desserts Worth the Drive from Reading",
-    "image": "https://faloodaandco.co.uk/assets/hero_tile.png",
-    "author": { "@type": "Organization", "name": "Falooda & Co" },
-    "publisher": { "@type": "Organization", "name": "Falooda & Co" },
-    "description": "Reading foodies are making the 30-minute drive to Falooda & Co on Farnham Road, Slough for luxury halal faloodas, cookie dough, and Indian street food."
+    "image": "https://taste-of-villageandco.co.uk/assets/hero_tile.png",
+    "author": { "@type": "Organization", "name": "Taste of Village" },
+    "publisher": { "@type": "Organization", "name": "Taste of Village" },
+    "description": "Reading foodies are making the 30-minute drive to Taste of Village on Farnham Road, Slough for luxury halal taste-of-villages, cookie dough, and Indian street food."
   });
 
   return (
     <div className="bg-brand-cream min-h-screen pt-20 pb-20 font-sans">
       <SEOHead 
-        title="Halal Desserts near Reading | Falooda & Co" 
-        description="Craving luxury halal desserts near Reading? Falooda & Co in Slough is just 30 minutes away — serving artisan faloodas, cookie dough, and chaats until midnight."
+        title="Halal Desserts near Reading | Taste of Village" 
+        description="Craving luxury halal desserts near Reading? Taste of Village in Slough is just 30 minutes away — serving artisan taste-of-villages, cookie dough, and chaats until midnight."
         canonicalUrl="/reading-desserts"
         schema={schema}
       />
@@ -33,7 +33,7 @@ export const ReadingDesserts = () => {
           <span className="text-brand-electricPeach font-bold tracking-widest uppercase text-xs mb-4 block">Worth Every Mile from Reading</span>
           <h1 className="font-serif text-5xl md:text-6xl text-brand-text mb-6">Reading's Best-Kept Dessert Secret is in Slough</h1>
           <p className="text-lg text-brand-text/70 leading-relaxed max-w-2xl mx-auto">
-            Reading has plenty of restaurants, but when it comes to authentic South Asian luxury desserts, locals are making the easy 30-minute drive along the M4 to Falooda & Co on Farnham Road.
+            Reading has plenty of restaurants, but when it comes to authentic South Asian luxury desserts, locals are making the easy 30-minute drive along the M4 to Taste of Village on Farnham Road.
           </p>
         </motion.div>
 
@@ -46,10 +46,10 @@ export const ReadingDesserts = () => {
           >
             <h2 className="font-serif text-3xl mb-4 text-brand-electricPeach">Why Reading Locals Love Us</h2>
             <p className="text-white/70 leading-relaxed mb-6">
-              We're not your average dessert parlour. Our Royal Heritage Falooda uses premium ingredients — from hand-crushed pistachios to fragrant Rooh Afza — crafted by artisans who live and breathe South Asian dessert culture.
+              We're not your average dessert parlour. Our Royal Heritage Taste of Village uses premium ingredients — from hand-crushed pistachios to fragrant Rooh Afza — crafted by artisans who live and breathe South Asian dessert culture.
             </p>
             <ul className="space-y-3 font-semibold text-brand-pinkLight">
-              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Artisan Falooda Collection</li>
+              <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Artisan Taste of Village Collection</li>
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> San Sebastian Cheesecake</li>
               <li className="flex items-center gap-3"><Sparkles size={16} className="text-brand-electricPeach" /> Late Night Indian Street Food</li>
             </ul>
@@ -87,7 +87,7 @@ export const ReadingDesserts = () => {
         >
           <h2 className="font-serif text-4xl mb-6">Drive from Reading. Arrive in Luxury.</h2>
           <p className="text-brand-text/70 leading-relaxed max-w-xl mx-auto mb-10">
-            Whether it's a date night, family outing, or late-night craving, Falooda & Co delivers an experience that Reading dessert lovers are raving about.
+            Whether it's a date night, family outing, or late-night craving, Taste of Village delivers an experience that Reading dessert lovers are raving about.
           </p>
           
           <div className="flex justify-center gap-4">

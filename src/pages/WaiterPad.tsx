@@ -122,7 +122,7 @@ export const WaiterPad = () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             to: vipForm.email,
-            subject: 'Welcome to the Falooda & Co VIP Club! 🎁',
+            subject: 'Welcome to the Taste of Village VIP Club! 🎁',
             html: `
               <div style="font-family: Arial, sans-serif; color: #1a1d2a; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 12px;">
                 <h2 style="color: #e91e63;">Welcome to the Club, ${vipForm.name}!</h2>
@@ -132,7 +132,7 @@ export const WaiterPad = () => {
                 </div>
                 <p style="font-size: 16px;">Plus, don't forget: Every 5th order through our Web App is completely FREE. Keep an eye on your inbox for early access to our seasonal menu item drops.</p>
                 <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;" />
-                <p style="color: #666; font-size: 14px;">- The Falooda & Co Team<br/>268 Farnham Rd, Slough</p>
+                <p style="color: #666; font-size: 14px;">- The Taste of Village Team<br/>268 Farnham Rd, Slough</p>
               </div>
             `
           }),
