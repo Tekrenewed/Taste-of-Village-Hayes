@@ -1,0 +1,237 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { useStore } from '../context/StoreContext';
+import { Plus, Minus, ShoppingBag, X, CheckCircle2, MessageCircle, Phone } from 'lucide-react';
+import { getMenuItems } from '../services/menuService';
+import { MenuItem } from '../types';
+import QRCode from 'react-qr-code';
+import { buildWhatsAppLink, buildOrderWhatsAppMessage, SHOP_CONFIG } from '../shopConfig';
+
+export const Menu = () => {
+  const { addToCart, cart, removeFromCart, addOrder, clearCart } = useStore();
+  const [activeCategory, setActiveCategory] = useState<string>('falooda');
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [checkoutStep, setCheckoutStep] = useState<'cart' | 'details' | 'success'>('cart');
+  const [customerInfo, setCustomerInfo] = useState({ name: '', phone: '' });
+  const [completedOrder, setCompletedOrder] = useState<any>(null);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const observer = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    async function loadMenu() {
+      try {
+        const items = await getMenuItems();
+        setMenuItems(items);
+      } catch (error) {
+        console.error("Failed to load menu items", error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    loadMenu();
+  }, []);
+
+  const categories = [
+    { id: 'falooda', label: 'Faloodas' },
+    { id: 'beverage', label: 'Fresh Juices' },
+    { id: 'wellness_shot', label: 'Wellness Shots' },
+    { id: 'hot_drink', label: 'Hot Drinks' },
+    { id: 'milkshake', label: 'Milkshakes' },
+    { id: 'chaat', label: 'Chaats' },
+    { id: 'wrap', label: 'Wraps' },
+    { id: 'fries', label: 'Fries' },
+    { id: 'desi_breakfast', label: 'Desi Breakfast' },
+    { id: 'traditional_meetha', label: 'Meetha' },
+    { id: 'cake', label: 'Cakes' },
+    { id: 'signature_dessert', label: 'Signature Desserts' },
+    { id: 'cookie_dough', label: 'Cookie Dough' },
+  ];
+
+  const groupedMenu = categories.map(cat => ({
+    ...cat,
+    items: menuItems.filter(item => item.category === cat.id)
+  })).filter(group => group.items.length > 0);
+
+  // ScrollSpy Logic
+  useEffect(() => {
+    if (isLoading || groupedMenu.length === 0) return;
+
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveCategory(entry.target.id.replace('category-', ''));
+          }
+        });
+      },
+      {
+        rootMargin: '-20% 0px -79% 0px' // Intersection triggers in the top 20% of the viewport
+      }
+    );
+
+    document.querySelectorAll('section[id^="category-"]').forEach(el => observer.current?.observe(el));
+
+    return () => observer.current?.disconnect();
+  }, [isLoading, menuItems]);
+
+  const scrollToCategory = (id: string) => {
+    setActiveCategory(id);
+    const element = document.getElementById(`category-${id}`);
+    if (element) {
+      const y = element.getBoundingClientRect().top + window.scrollY - 180;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+  const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+  const handleProceedToDetails = () => {
+    setCheckoutStep('details');
+  };
+
+  const submitOrder = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (cart.length === 0) return;
+
+    const orderId = `ORD-${Math.floor(1000 + Math.random() * 9000)}`;
+
+    const newOrder = {
+      id: orderId,
+      customerName: customerInfo.name.trim(),
+      customerPhone: customerInfo.phone.trim(),
+      type: 'collection' as const,
+      items: [...cart],
+      total: cartTotal,
+      status: 'pending' as const,
+      timestamp: new Date()
+    };
+
+    addOrder(newOrder);
+    setCompletedOrder(newOrder);
+    setCheckoutStep('success');
+    clearCart();
+
+    const message = buildOrderWhatsAppMessage(newOrder);
+    const whatsappUrl = buildWhatsAppLink(message);
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const getWhatsAppOrderLink = () => {
+    if (!completedOrder) return '#';
+    const message = buildOrderWhatsAppMessage(completedOrder);
+    return buildWhatsAppLink(message);
+  };
+
+  return (
+    <div className="min-h-screen bg-brand-cacao pb-20">
+      {/* Category Filter - Sticky UberEats Style */}
+      <div 
+        className="bg-brand-cacao/95 backdrop-blur-md shadow-sm sticky z-40 py-4 border-b border-brand-rose/40 animate-fade-in"
+        style={{ top: '116px' }} // Exactly clears the red top bar + Navbar on mobile/desktop
+      >
+        <div className="max-w-7xl mx-auto px-4 overflow-x-auto [&::-webkit-scrollbar]:hidden" style={{ scrollBehavior: 'smooth' }}>
+          <div className="flex space-x-4">
+            {groupedMenu.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => scrollToCategory(cat.id)}
+                className={`px-6 py-2.5 rounded-full font-bold whitespace-nowrap transition-all duration-300 border-2 ${
+                  activeCategory === cat.id
+                  ? 'bg-brand-text text-white border-brand-text shadow-md'
+                  : 'bg-white text-brand-text/70 border-brand-rose/20 hover:border-brand-text hover:text-brand-text'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Menu Sections Rendered Sequentially */}
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        
+        {/* Build Your Own Advertisement */}
+        <div className="mb-16 bg-gradient-to-r from-brand-pistachio to-[#a2d9a5] rounded-[3rem] p-8 md:p-12 shadow-xl border border-white/20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 group">
+          <div className="relative z-10 text-white max-w-2xl">
+            <div className="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-full font-bold text-xs tracking-widest uppercase mb-4 animate-pulse">
+              NEW EXPERIENCES
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 drop-shadow-sm">Make Your Own Falooda</h2>
+            <p className="text-lg text-white/90 mb-8 font-medium">Be the architect of your own dessert. Choose your base, pick your signature syrup, select the perfect scoop, and sprinkle it with gold dust.</p>
+            <button 
+              onClick={() => window.location.hash = '#/build-your-own'}
+              className="bg-white text-brand-pistachio font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 hover:bg-brand-peach hover:text-white"
+            >
+              Start Building Now
+            </button>
+          </div>
+          <div className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0 z-10 hidden md:block">
+            <img src="/assets/builder_img.png" alt="Build it" className="w-full h-full object-cover rounded-full shadow-2xl border-8 border-white/30 group-hover:rotate-12 transition-transform duration-700" />
+          </div>
+          <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/2 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
+        </div>
+
+        {/* Loading state */}
+        {isLoading && (
+          <div className="text-center py-20 font-bold text-brand-text/50 flex flex-col items-center">
+            <div className="w-12 h-12 border-4 border-brand-peach border-t-transparent rounded-full animate-spin mb-4"></div>
+            Loading menu...
+          </div>
+        )}
+
+        {/* Render Each Category as a ScrollSpy Section */}
+        {!isLoading && groupedMenu.map((group) => (
+          <section key={group.id} id={`category-${group.id}`} className="mb-16 scroll-mt-48">
+            <h2 className="font-display text-4xl font-bold text-brand-text mb-8 tracking-tight">{group.label}</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {group.items.map((item, i) => (
+                <div
+                  key={item.id}
+                  className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group border border-brand-rose/20 animate-fade-up"
+                  style={{ animationDelay: `${i * 50}ms` }}
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                    {item.popular && (
+                      <span className="absolute top-4 left-4 bg-brand-peach text-white text-[10px] font-black tracking-widest px-3 py-1 rounded-full shadow-md z-10">
+                        POPULAR
+                      </span>
+                    )}
+
+                    <button
+                      onClick={() => {
+                        addToCart(item);
+                        setIsCartOpen(true);
+                      }}
+                      title={`Add ${item.name} to order`}
+                      className="absolute bottom-4 right-4 bg-white text-brand-text p-4 rounded-full shadow-lg hover:bg-brand-pistachio hover:text-white transition-all transform hover:scale-110 active:scale-95 z-20 group-hover:shadow-[0_0_20px_rgba(191,214,120,0.5)]"
+                    >
+                      <Plus size={24} />
+                    </button>
+                  </div>
+                  <div className="p-6 space-y-2">
+                    <div className="flex justify-between items-start gap-4">
+                      <h3 className="font-display text-xl font-bold text-brand-text leading-tight">{item.name}</h3>
+                      <span className="font-bold text-brand-peach text-lg whitespace-nowrap">£{item.price.toFixed(2)}</span>
+                    </div>
+                    <p className="text-brand-text/60 text-sm leading-relaxed line-clamp-2">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+
+// ... (Cart drawer remains identical)

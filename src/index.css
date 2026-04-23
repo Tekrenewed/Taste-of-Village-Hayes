@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-terracotta: #8a3d2a;
+  --color-terracotta-light: #a3503a;
+  --color-cream: #f4e8c2;
+  --color-cream-dark: #e6d5a1;
+  --color-pine: #1b3b36;
+  --color-pine-light: #254d47;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Outfit", sans-serif;
+
+  --animate-ken-burns: ken-burns 20s ease-in-out infinite alternate;
+  --animate-fade-in-up: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+
+  @keyframes ken-burns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.1) translate(-1%, -1%); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Base resets & theme application */
+@layer base {
+  body {
+    @apply bg-cream text-pine font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+@layer utilities {
+  .glass-pine {
+    @apply bg-pine/80 backdrop-blur-xl border border-pine-light/30 shadow-[0_8px_32px_rgba(27,59,54,0.7)];
+  }
+  .pine-card {
+    @apply bg-pine/40 border border-terracotta/20 backdrop-blur-md;
+  }
+  .warm-glow {
+    box-shadow: 0 0 30px rgba(138, 61, 42, 0.5);
+  }
+  .glass-premium {
+    @apply bg-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)];
+  }
+  .glass-panel {
+    @apply bg-pine/60 backdrop-blur-3xl border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.5)];
+  }
+  .cinematic-overlay {
+    background: radial-gradient(circle at center, transparent 0%, rgba(27, 59, 54, 0.8) 100%);
+  }
+}
