@@ -13,18 +13,19 @@ export const SHOP_CONFIG = {
   tenant_id: 'tov00da2-4444-4444-4444-000000000004',
   name: 'Taste Of Village',
   tagline: 'Authentic Desi Taste from Lahore & Gujranwala',
-  whatsappNumber: '447000000000', // Update with real number
-  phoneNumber: '020 8000 0000', // Update
-  phoneNumberRaw: '+442080000000',
+  whatsappNumber: '442034093786', // WhatsApp using landline format (or update with mobile if known)
+  phoneNumber: '020 3409 3786',
+  phoneNumberRaw: '+442034093786',
   address: '766B Uxbridge Rd, Hayes',
   postcode: 'UB4 0RU',
   w3w: '///example.words.here',
-  instagram: 'https://www.instagram.com/', // Update
-  facebook: 'https://www.facebook.com/',
-  website: 'https://tasteofvillage.co.uk',
+  instagram: 'https://www.instagram.com/tasteofvillagehayes/', // Placeholder
+  facebook: 'https://www.facebook.com/p/Taste-of-Village-61551672639808/',
+  tiktok: 'https://www.tiktok.com/@tasteofvillage1',
+  website: 'https://tasteofvillagehayes.uk',
   openingHours: '12:00 PM – 11:00 PM',
   openingDays: 'Monday – Sunday',
-  googleReviewUrl: 'https://share.google/WxVVQqf55dk2blyz9',
+  googleReviewUrl: 'https://share.google/53U4LKNE2c2wZ18rc',
 } as const;
 
 /**
