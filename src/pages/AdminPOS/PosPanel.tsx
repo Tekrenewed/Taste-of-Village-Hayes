@@ -694,7 +694,13 @@ export const PosPanel: React.FC<PosPanelProps> = ({
         <div onClick={() => setSizePickerItem(null)} style={{ position:'fixed', inset:0, zIndex:9999, background: isDark ? 'rgba(0,0,0,0.7)' : 'rgba(0,0,0,0.35)', backdropFilter:'blur(8px)', WebkitBackdropFilter:'blur(8px)', display:'flex', alignItems:'center', justifyContent:'center' }}>
           <div onClick={e => e.stopPropagation()} style={{ background: isDark ? '#1A1A2E' : '#FFFFFF', borderRadius:'28px', padding:'36px 32px 28px', width:'380px', maxWidth:'90vw', boxShadow: isDark ? '0 25px 60px rgba(0,0,0,0.5)' : '0 25px 60px rgba(0,0,0,0.15)', border: isDark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.06)' }}>
             <p style={{ fontSize:'10px', fontWeight:800, textTransform:'uppercase', letterSpacing:'3px', color: isDark ? 'rgba(240,230,214,0.4)' : 'rgba(45,42,38,0.4)', margin:'0 0 6px', textAlign:'center' }}>Choose Size</p>
-            <h3 style={{ fontSize:'22px', fontWeight:800, color: isDark ? '#F0E6D6' : '#2D2A26', margin:'0 0 28px', textAlign:'center', letterSpacing:'-0.3px' }}>{sizePickerItem.name}</h3>
+            <h3 style={{ fontSize:'22px', fontWeight:800, color: isDark ? '#F0E6D6' : '#2D2A26', margin:'0 0 16px', textAlign:'center', letterSpacing:'-0.3px' }}>{sizePickerItem.name}</h3>
+            {['curries', 'karahi'].includes(sizePickerItem.category) && (
+              <div className="mb-6 bg-terracotta/10 border border-terracotta/30 rounded-xl p-3 text-center animate-pulse shadow-inner">
+                <p className="text-[9px] font-black text-terracotta uppercase tracking-[2px] mb-1">🗣️ Cashier Script</p>
+                <p className="text-sm font-bold text-terracotta">"Would you like to Go Large for just £2.99 extra?"</p>
+              </div>
+            )}
             <div style={{ display:'flex', gap:'12px' }}>
               <button onClick={() => addSizedItemToCart(sizePickerItem, 'regular')} style={{ flex:1, padding:'24px 16px', borderRadius:'20px', cursor:'pointer', background: isDark ? 'rgba(255,255,255,0.05)' : '#FAF6F1', border: isDark ? '2px solid rgba(255,255,255,0.08)' : '2px solid rgba(0,0,0,0.06)', transition:'all 0.2s ease', textAlign:'center' }} onMouseEnter={e => { e.currentTarget.style.borderColor = '#A8D8A8'; e.currentTarget.style.transform='scale(1.03)'; }} onMouseLeave={e => { e.currentTarget.style.borderColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)'; e.currentTarget.style.transform='scale(1)'; }}>
                 <p style={{ fontSize:'28px', margin:'0 0 8px' }}>🥤</p>
