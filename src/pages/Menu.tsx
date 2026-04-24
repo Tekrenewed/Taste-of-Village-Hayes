@@ -19,7 +19,7 @@ import { sendTableAlert } from '../services/tableService';
 const WEB_SIZE_ITEMS: Record<string, { regular: number; large: number }> = {};
 
 // Categories that always have Regular / Large
-const SIZE_CATEGORIES: string[] = ['curries', 'karahi'];
+const SIZE_CATEGORIES: string[] = ['curries', 'karahi', 'rolls', 'burgers_noodles'];
 
 import { appendItemsToOrder } from '../services/orderService';
 
@@ -743,12 +743,24 @@ export const Menu = () => {
               <h3 className="font-serif text-xl font-bold text-brand-text">{sizePickerItem.name}</h3>
               <p className="text-brand-text/50 text-sm mt-1">Choose your size</p>
             </div>
-
             <div className="space-y-3">
               {(() => {
                 const sizes = WEB_SIZE_ITEMS[sizePickerItem.name];
                 const regularPrice = sizes ? sizes.regular : sizePickerItem.price;
-                const largePrice = sizes ? sizes.large : sizePickerItem.price + 2.99;
+                
+                let largePrice = sizes ? sizes.large : sizePickerItem.price + 2.99;
+                if (!sizes) {
+                  if (sizePickerItem.category === 'rolls') {
+                    largePrice = sizePickerItem.price + 2.50;
+                  } else if (sizePickerItem.category === 'burgers_noodles') {
+                    largePrice = sizePickerItem.price + 2.99;
+                  }
+                }
+                
+                const isMeal = sizePickerItem.category === 'burgers_noodles';
+                const largeLabel = isMeal ? 'Make it a Meal' : 'Large';
+                const largeDesc = isMeal ? 'Add Chips & Drink' : 'Extra portion';
+
                 return (
                   <>
                     <button
@@ -757,7 +769,7 @@ export const Menu = () => {
                         setSizePickerItem(null);
                         setIsCartOpen(true);
                       }}
-                      className="w-full flex items-center justify-between p-5 rounded-[2rem] border-2 border-brand-pinkLight/30 hover:border-brand-pink hover:bg-brand-pinkLight/10 transition-all group"
+                      className="w-full flex items-center justify-between p-5 rounded-[2rem] border-2 border-brand-pinkLight/30 hover:border-brand-pink hover:bg-brand-pinkLight/10 transition-all group mt-6"
                     >
                       <div className="text-left">
                         <p className="font-bold text-brand-text group-hover:text-brand-pink transition-colors">Regular</p>
@@ -767,17 +779,17 @@ export const Menu = () => {
                     </button>
                     <button
                       onClick={() => {
-                        addToCart({ ...sizePickerItem, id: `${sizePickerItem.id}_large`, name: `${sizePickerItem.name} (Large)`, price: largePrice });
+                        addToCart({ ...sizePickerItem, id: `${sizePickerItem.id}_large`, name: `${sizePickerItem.name} (${isMeal ? 'Meal' : 'Large'})`, price: largePrice });
                         setSizePickerItem(null);
                         setIsCartOpen(true);
                       }}
-                      className="w-full flex items-center justify-between p-5 rounded-[2rem] border-2 border-brand-pink/30 bg-brand-pinkLight/10 hover:border-brand-pink hover:bg-brand-pinkLight/20 transition-all group"
+                      className="w-full flex items-center justify-between p-5 rounded-[2rem] border-2 border-brand-blueLight/30 hover:border-brand-blue hover:bg-brand-blueLight/10 transition-all group mt-3"
                     >
                       <div className="text-left">
-                        <p className="font-bold text-brand-text group-hover:text-brand-pink transition-colors">Large ⭐</p>
-                        <p className="text-brand-text/40 text-xs">Extra generous portion</p>
+                        <p className="font-bold text-brand-text group-hover:text-brand-blue transition-colors">{largeLabel}</p>
+                        <p className="text-brand-text/40 text-xs">{largeDesc}</p>
                       </div>
-                      <span className="font-black text-brand-pink text-lg">£{largePrice.toFixed(2)}</span>
+                      <span className="font-black text-brand-blue text-lg">£{largePrice.toFixed(2)}</span>
                     </button>
                   </>
                 );

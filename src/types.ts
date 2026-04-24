@@ -4,7 +4,7 @@ export interface MenuItem {
   description: string;
   price: number;
   originalPrice?: number;
-  category: 'starters' | 'curries' | 'biryani' | 'naan_breads' | 'grills' | 'drinks' | 'desserts';
+  category: string;
   image: string;
   popular?: boolean;
   is86d?: boolean;

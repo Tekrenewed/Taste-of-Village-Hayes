@@ -685,8 +685,14 @@ export const PosPanel: React.FC<PosPanelProps> = ({
 
       // ── Legacy: hardcoded SIZE_VARIATIONS ──
       let sizes = SIZE_VARIATIONS[sizePickerItem.name];
-      if (!sizes && ['curries', 'karahi'].includes(sizePickerItem.category)) {
-        sizes = { regular: sizePickerItem.price, large: sizePickerItem.price + 2.99 };
+      if (!sizes) {
+        if (['curries', 'karahi'].includes(sizePickerItem.category)) {
+          sizes = { regular: sizePickerItem.price, large: sizePickerItem.price + 2.99 };
+        } else if (sizePickerItem.category === 'rolls') {
+          sizes = { regular: sizePickerItem.price, large: sizePickerItem.price + 2.50 };
+        } else if (sizePickerItem.category === 'burgers_noodles') {
+          sizes = { regular: sizePickerItem.price, large: sizePickerItem.price + 2.99 };
+        }
       }
       if (!sizes) return null;
       const isDark = posDarkMode;
@@ -695,21 +701,25 @@ export const PosPanel: React.FC<PosPanelProps> = ({
           <div onClick={e => e.stopPropagation()} style={{ background: isDark ? '#1A1A2E' : '#FFFFFF', borderRadius:'28px', padding:'36px 32px 28px', width:'380px', maxWidth:'90vw', boxShadow: isDark ? '0 25px 60px rgba(0,0,0,0.5)' : '0 25px 60px rgba(0,0,0,0.15)', border: isDark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.06)' }}>
             <p style={{ fontSize:'10px', fontWeight:800, textTransform:'uppercase', letterSpacing:'3px', color: isDark ? 'rgba(240,230,214,0.4)' : 'rgba(45,42,38,0.4)', margin:'0 0 6px', textAlign:'center' }}>Choose Size</p>
             <h3 style={{ fontSize:'22px', fontWeight:800, color: isDark ? '#F0E6D6' : '#2D2A26', margin:'0 0 16px', textAlign:'center', letterSpacing:'-0.3px' }}>{sizePickerItem.name}</h3>
-            {['curries', 'karahi'].includes(sizePickerItem.category) && (
+            {['curries', 'karahi', 'rolls', 'burgers_noodles'].includes(sizePickerItem.category) && (
               <div className="mb-6 bg-terracotta/10 border border-terracotta/30 rounded-xl p-3 text-center animate-pulse shadow-inner">
                 <p className="text-[9px] font-black text-terracotta uppercase tracking-[2px] mb-1">🗣️ Cashier Script</p>
-                <p className="text-sm font-bold text-terracotta">"Would you like to Go Large for just £2.99 extra?"</p>
+                <p className="text-sm font-bold text-terracotta">
+                  {sizePickerItem.category === 'burgers_noodles' 
+                    ? `"Would you like to Make it a Meal for just £2.99 extra?"`
+                    : `"Would you like to Go Large for just £${(sizes.large - sizes.regular).toFixed(2)} extra?"`}
+                </p>
               </div>
             )}
             <div style={{ display:'flex', gap:'12px' }}>
               <button onClick={() => addSizedItemToCart(sizePickerItem, 'regular')} style={{ flex:1, padding:'24px 16px', borderRadius:'20px', cursor:'pointer', background: isDark ? 'rgba(255,255,255,0.05)' : '#FAF6F1', border: isDark ? '2px solid rgba(255,255,255,0.08)' : '2px solid rgba(0,0,0,0.06)', transition:'all 0.2s ease', textAlign:'center' }} onMouseEnter={e => { e.currentTarget.style.borderColor = '#A8D8A8'; e.currentTarget.style.transform='scale(1.03)'; }} onMouseLeave={e => { e.currentTarget.style.borderColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)'; e.currentTarget.style.transform='scale(1)'; }}>
-                <p style={{ fontSize:'28px', margin:'0 0 8px' }}>🥤</p>
+                <p style={{ fontSize:'28px', margin:'0 0 8px' }}>{sizePickerItem.category === 'burgers_noodles' ? '🍔' : '🥤'}</p>
                 <p style={{ fontWeight:800, fontSize:'14px', color: isDark ? '#F0E6D6' : '#2D2A26', margin:'0 0 4px', textTransform:'uppercase', letterSpacing:'1px' }}>Regular</p>
                 <p style={{ fontWeight:900, fontSize:'20px', color: '#A8D8A8', margin:0 }}>£{sizes.regular.toFixed(2)}</p>
               </button>
               <button onClick={() => addSizedItemToCart(sizePickerItem, 'large')} style={{ flex:1, padding:'24px 16px', borderRadius:'20px', cursor:'pointer', background: isDark ? 'rgba(232,160,191,0.08)' : '#FFF5F8', border: isDark ? '2px solid rgba(232,160,191,0.2)' : '2px solid rgba(212,130,155,0.15)', transition:'all 0.2s ease', textAlign:'center' }} onMouseEnter={e => { e.currentTarget.style.borderColor = '#E8A0BF'; e.currentTarget.style.transform='scale(1.03)'; }} onMouseLeave={e => { e.currentTarget.style.borderColor = isDark ? 'rgba(232,160,191,0.2)' : 'rgba(212,130,155,0.15)'; e.currentTarget.style.transform='scale(1)'; }}>
-                <p style={{ fontSize:'28px', margin:'0 0 8px' }}>🍨</p>
-                <p style={{ fontWeight:800, fontSize:'14px', color: isDark ? '#F0E6D6' : '#2D2A26', margin:'0 0 4px', textTransform:'uppercase', letterSpacing:'1px' }}>Large</p>
+                <p style={{ fontSize:'28px', margin:'0 0 8px' }}>{sizePickerItem.category === 'burgers_noodles' ? '🍟' : '🍨'}</p>
+                <p style={{ fontWeight:800, fontSize:'14px', color: isDark ? '#F0E6D6' : '#2D2A26', margin:'0 0 4px', textTransform:'uppercase', letterSpacing:'1px' }}>{sizePickerItem.category === 'burgers_noodles' ? 'Meal' : 'Large'}</p>
                 <p style={{ fontWeight:900, fontSize:'20px', color: '#E8A0BF', margin:0 }}>£{sizes.large.toFixed(2)}</p>
               </button>
             </div>
