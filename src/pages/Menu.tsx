@@ -55,12 +55,18 @@ export const Menu = () => {
   }, []);
 
   const categories = [
-    { id: 'starters', label: 'Starters & Sides' },
-    { id: 'curries', label: 'Curries & Karahis' },
-    { id: 'biryani', label: 'Biryani & Rice' },
-    { id: 'naan_breads', label: 'Naan & Breads' },
-    { id: 'grills', label: 'Tandoori Grills' },
-    { id: 'drinks', label: 'Drinks' },
+    { id: 'starters', label: 'Tala\'a Hua Zaiqah' },
+    { id: 'curries', label: 'Desi Handi & Curries' },
+    { id: 'karahi', label: 'Karahi E Khaas' },
+    { id: 'bread', label: 'Naan, Roti & Paratha' },
+    { id: 'rice', label: 'Biryani & Rice' },
+    { id: 'bbq', label: 'BBQ / Tandoori Se' },
+    { id: 'platters', label: 'Special Platters' },
+    { id: 'burgers_noodles', label: 'Burgers & Noodles' },
+    { id: 'chaat', label: 'Chatkara Junction' },
+    { id: 'rolls', label: 'Flavorful Rolls' },
+    { id: 'brunch', label: 'Brunch Offers' },
+    { id: 'specials', label: 'Weekend Specials' },
     { id: 'desserts', label: 'Desserts' }
   ];
 

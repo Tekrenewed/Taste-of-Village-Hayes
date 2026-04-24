@@ -130,6 +130,7 @@ export const MenuPanel: React.FC<MenuPanelProps> = (props) => {
   };
 
   const categoryLabels: Record<string, string> = {
+    // Legacy categories
     curry: '🍨 Taste of Villages', milkshake: '🥤 Milkshakes', chaat: '🥘 Chaats',
     wrap: '🌯 Wraps', fries: '🍟 Fries', hot_drink: '☕ Hot Drinks',
     beverage: '🧃 Juices', wellness_shot: '💊 Wellness', cake: '🎂 Cakes',
@@ -137,12 +138,13 @@ export const MenuPanel: React.FC<MenuPanelProps> = (props) => {
     cookie_dough: '🍪 Cookie Dough', english_breakfast: '🍳 English Breakfast',
     sweet_breakfast: '🥞 Sweet Breakfast', desi_breakfast: '🫓 Desi Breakfast',
     breakfast_drinks: '☕ Breakfast Drinks',
-    // New categories (v1.3)
-    hot_drinks: '☕ Hot Drinks', milkshakes: '🥤 Milkshakes',
-    fresh_juice: '🍊 Fresh Pressed', juice_blends: '🌈 Mix & Glow',
-    wellness_shots: '💪 Wellness Shots', cold_beverages: '🧊 Cold Beverages',
-    dessert: '🍰 Desserts', lunch: '🍔 Lunch', salad: '🥗 Salads',
-    ice_cream: '🍦 Ice Cream', signature_desserts: '✨ Signature Desserts',
+    // Final Menu Categories
+    curries: '🥘 Curries / Saalan', karahi: '🥘 Karahi E Khaas',
+    specials: '🌟 Weekend Specials', starters: '🍢 Starters',
+    bread: '🫓 Naan, Roti & Paratha', platters: '🍽️ Platters',
+    brunch: '🍳 Brunch', desserts: '🍰 Desserts', bbq: '🍢 BBQ & Tandoori',
+    burgers_noodles: '🍔 Burgers & Noodles', rolls: '🌯 Rolls',
+    rice: '🍚 Biryani & Rice',
   };
 
   return (
