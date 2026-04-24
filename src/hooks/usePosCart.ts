@@ -59,7 +59,7 @@ export function usePosCart(addOrder: (order: Order) => void | Promise<void>, sol
       return;
     }
     // Legacy fallback: hardcoded SIZE_VARIATIONS / ITEM_MODIFIERS
-    if (SIZE_VARIATIONS[item.name]) {
+    if (SIZE_VARIATIONS[item.name] || ['curries', 'karahi'].includes(item.category)) {
       setSizePickerItem(item);
       return;
     }
@@ -76,7 +76,10 @@ export function usePosCart(addOrder: (order: Order) => void | Promise<void>, sol
 
 
   const addSizedItemToCart = useCallback((item: MenuItem, size: 'regular' | 'large') => {
-    const sizeInfo = SIZE_VARIATIONS[item.name];
+    let sizeInfo = SIZE_VARIATIONS[item.name];
+    if (!sizeInfo && ['curries', 'karahi'].includes(item.category)) {
+      sizeInfo = { regular: item.price, large: item.price + 2.99 };
+    }
     if (!sizeInfo) return;
     const sizeLabel = size === 'large' ? 'L' : 'R';
     const sizedItem = {

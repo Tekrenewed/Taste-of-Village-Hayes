@@ -19,7 +19,7 @@ import { sendTableAlert } from '../services/tableService';
 const WEB_SIZE_ITEMS: Record<string, { regular: number; large: number }> = {};
 
 // Categories that always have Regular / Large
-const SIZE_CATEGORIES: string[] = [];
+const SIZE_CATEGORIES: string[] = ['curries', 'karahi'];
 
 import { appendItemsToOrder } from '../services/orderService';
 
@@ -748,7 +748,7 @@ export const Menu = () => {
               {(() => {
                 const sizes = WEB_SIZE_ITEMS[sizePickerItem.name];
                 const regularPrice = sizes ? sizes.regular : sizePickerItem.price;
-                const largePrice = sizes ? sizes.large : sizePickerItem.price + 1.50;
+                const largePrice = sizes ? sizes.large : sizePickerItem.price + 2.99;
                 return (
                   <>
                     <button

@@ -684,7 +684,10 @@ export const PosPanel: React.FC<PosPanelProps> = ({
       }
 
       // ── Legacy: hardcoded SIZE_VARIATIONS ──
-      const sizes = SIZE_VARIATIONS[sizePickerItem.name];
+      let sizes = SIZE_VARIATIONS[sizePickerItem.name];
+      if (!sizes && ['curries', 'karahi'].includes(sizePickerItem.category)) {
+        sizes = { regular: sizePickerItem.price, large: sizePickerItem.price + 2.99 };
+      }
       if (!sizes) return null;
       const isDark = posDarkMode;
       return (
