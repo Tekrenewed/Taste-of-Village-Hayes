@@ -8,6 +8,13 @@
   --color-pine: #1b3b36;
   --color-pine-light: #254d47;
   
+  /* Legacy Falooda "brand-" colors mapped to Taste of Village colors */
+  --color-brand-pink: #8a3d2a; /* terracotta */
+  --color-brand-pinkLight: #a3503a; /* terracotta-light */
+  --color-brand-cream: #f4e8c2; /* cream */
+  --color-brand-text: #1b3b36; /* pine */
+  --color-brand-blue: #254d47; /* pine-light */
+
   --font-serif: "Playfair Display", serif;
   --font-sans: "Outfit", sans-serif;
 
@@ -35,6 +42,7 @@
 @layer base {
   body {
     @apply bg-cream text-pine font-sans;
+    color-scheme: light;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
